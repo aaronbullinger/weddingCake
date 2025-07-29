@@ -19,6 +19,30 @@ export default {
 #app {
   font-family: Arial, sans-serif;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 24px;
+  padding: 0 8px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+main p {
+  font-size: 1rem;
+}
+
+/* Ab 600px: größere Schrift und mehr Abstand */
+@media (min-width: 600px) {
+  #app {
+    margin-top: 50px;
+    padding: 0 24px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  main p {
+    font-size: 1.25rem;
+  }
 }
 </style>
