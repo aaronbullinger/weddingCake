@@ -196,8 +196,9 @@ export default {
 .info-text h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  line-height: 1.3;
+  line-height: 1.2;
   font-weight: 400;
+  color: #3B5D47;
 }
 
 .info-text h2 .highlight {
@@ -206,10 +207,12 @@ export default {
 }
 
 .info-text p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
-  color: #333;
+  color: #4A2E23;
+  font-family: Helvetica, sans-serif;
   margin-bottom: 15px;
+  margin-right: -50px;
 }
 
 .callToAction-button {

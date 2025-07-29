@@ -22,17 +22,16 @@
 
 <style scoped>
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   background: #fff;
   z-index: 1000;
   padding-bottom: 10px;
+  width: 100vw;
 }
 
 .homebutton {
@@ -63,7 +62,7 @@
 }
 
 .nav-links .router-link-active {
-  font-weight: bold;
   color: #3B5D47;
+  font-weight: bold;
 }
 </style>
