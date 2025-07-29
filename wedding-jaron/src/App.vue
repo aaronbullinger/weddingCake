@@ -42,6 +42,26 @@
       </div>
     </div>
 
+    <!-- Countdown Timer Section -->
+    <div class="countdown-timer">
+      <div class="time-box">
+        <span>{{ days }}</span>
+        <small>Tage</small>
+      </div>
+      <div class="time-box">
+        <span>{{ hours }}</span>
+        <small>Stunden</small>
+      </div>
+      <div class="time-box">
+        <span>{{ minutes }}</span>
+        <small>Minuten</small>
+      </div>
+      <div class="time-box">
+        <span>{{ seconds }}</span>
+        <small>Sekunden</small>
+      </div>
+    </div>
+
     <!-- Info Box Section-->
     <div class="info-box">
       <div class="info-image">
@@ -79,12 +99,52 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      targetDate: new Date("2026-05-26T00:00:00").getTime(),
+      now: new Date().getTime(),
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+  },
+  mounted() {
+    this.updateCountdown();
+    this.interval = setInterval(this.updateCountdown, 1000);
+  },
+  beforeUnmount() {
+    clearInterval(this.interval);
+  },
+  methods: {
+    updateCountdown() {
+      const now = new Date().getTime();
+      const distance = this.targetDate - now;
+
+      if (distance <= 0) {
+        this.days = this.hours = this.minutes = this.seconds = 0;
+        clearInterval(this.interval);
+        return;
+      }
+
+      this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      this.hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    },
+  },
 };
 </script>
 
 <style>
 #app {
-  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+div {
+  margin: 0.5rem;
 }
 
 .navbar {
@@ -145,7 +205,6 @@ export default {
   font-size: 40px;
   color: #3B5D47;
   line-height: 0.7;
-  margin: 0 20px 0 5%;
   text-align: left;
 }
 
@@ -238,5 +297,32 @@ export default {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-family: "Kefa", serif;
+  background-color: #3B5D47;
+  width: 100vw;
+  margin: 60px calc(-50vw + 50%);
+  padding: 20px 0;
+}
+
+.time-box {
+  text-align: center;
+}
+
+.time-box span {
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #A8CBB7;
+}
+
+.time-box small {
+  font-size: 1rem;
+  color: #FFFFFF;
 }
 </style>
