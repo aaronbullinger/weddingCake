@@ -57,6 +57,7 @@ export default {
   padding-right: 15%;
   font-size: 25px;
   color: #707070;
+  text-decoration: none;
 }
 
 @media(max-width: 600px) {
@@ -71,7 +72,12 @@ export default {
   }
 }
 
-.nav-links .router-link-active {
+.nav-links a {
+  color: #707070;
+  text-decoration: none;
+}
+
+.nav-links a .router-link-active {
   font-weight: bold;
   color: black;
 }
