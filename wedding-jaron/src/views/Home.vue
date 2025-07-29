@@ -1,81 +1,83 @@
 <template>
-  <!-- Save Our Date Section -->
-  <div class="save-date-section">
-    <div class="save-text">
-      <h1>
-        SAVE<br>
-        OUR<br>
-        DATE
-      </h1>
-    </div>
-
-    <div class="date-images">
-      <div class="date-item">
-        <img src="../assets/safeOurDateImg1.png" alt="Bild 1">
-        <span class="date-number">26</span>
+  <main>
+    <!-- Save Our Date Section -->
+    <div class="save-date-section">
+      <div class="save-text">
+        <h1>
+          SAVE<br>
+          OUR<br>
+          DATE
+        </h1>
       </div>
-      <div class="date-item">
-        <img src="../assets/safeOurDateImg2.png" alt="Bild 1">
-        <span class="date-number">05</span>
+
+      <div class="date-images">
+        <div class="date-item">
+          <img src="../assets/safeOurDateImg1.png" alt="Bild 1">
+          <span class="date-number">26</span>
+        </div>
+        <div class="date-item">
+          <img src="../assets/safeOurDateImg2.png" alt="Bild 1">
+          <span class="date-number">05</span>
+        </div>
+        <div class="date-item">
+          <img src="../assets/safeOurDateImg3.png" alt="Bild 1">
+          <span class="date-number">26</span>
+        </div>
       </div>
-      <div class="date-item">
-        <img src="../assets/safeOurDateImg3.png" alt="Bild 1">
-        <span class="date-number">26</span>
+    </div>
+
+    <!-- Countdown Timer Section -->
+    <div class="countdown-timer">
+      <div class="time-box">
+        <span>{{ days }}</span>
+        <small>Tage</small>
+      </div>
+      <div class="time-box">
+        <span>{{ hours }}</span>
+        <small>Stunden</small>
+      </div>
+      <div class="time-box">
+        <span>{{ minutes }}</span>
+        <small>Minuten</small>
+      </div>
+      <div class="time-box">
+        <span>{{ seconds }}</span>
+        <small>Sekunden</small>
       </div>
     </div>
-  </div>
 
-  <!-- Countdown Timer Section -->
-  <div class="countdown-timer">
-    <div class="time-box">
-      <span>{{ days }}</span>
-      <small>Tage</small>
-    </div>
-    <div class="time-box">
-      <span>{{ hours }}</span>
-      <small>Stunden</small>
-    </div>
-    <div class="time-box">
-      <span>{{ minutes }}</span>
-      <small>Minuten</small>
-    </div>
-    <div class="time-box">
-      <span>{{ seconds }}</span>
-      <small>Sekunden</small>
-    </div>
-  </div>
+    <!-- Info Box Section-->
+    <div class="info-box">
+      <div class="info-image">
+        <img src="../assets/homePageInfoImg.png" alt="Paarbild">
+      </div>
 
-  <!-- Info Box Section-->
-  <div class="info-box">
-    <div class="info-image">
-      <img src="../assets/homePageInfoImg.png" alt="Paarbild">
-    </div>
+      <div class="info-text">
+        <h2>
+          <span class="highlight">Wir feiern nochmal richtig</span><br>
+          und das mit Dir!
+        </h2>
+        <p>
+          Mit großer Vorfreude laden wir dich zu unserem ganz besonderen Tag ein.
+          <br>
+          Am <strong>26.05.26</strong>, ja, das ist ein Dienstag, feiern wir uns –
+          mit einer freien Trauung, gutem Essen, Musik und allem, was das Herz berührt.
+          Wir freuen uns riesig, diesen unvergesslichen Moment mit dir zu teilen!
+        </p>
+        <p>
+          Auf dieser Homepage findest du alle wichtigen Informationen rund um unsere Hochzeit –
+          von Ablauf über Unterkunft bis hin zu Geschenken. Wir halten alles stets aktuell,
+          damit du immer bestens informiert bist.
+        </p>
+        <p>
+          Solltest du trotzdem noch Fragen haben, stehen wir – und natürlich auch unsere lieben
+          Trauzeuginnen – dir jederzeit gerne zur Verfügung!
+        </p>
 
-    <div class="info-text">
-      <h2>
-        <span class="highlight">Wir feiern nochmal richtig</span><br>
-        und das mit Dir!
-      </h2>
-      <p>
-        Mit großer Vorfreude laden wir dich zu unserem ganz besonderen Tag ein.
-        <br>
-        Am <strong>26.05.26</strong>, ja, das ist ein Dienstag, feiern wir uns –
-        mit einer freien Trauung, gutem Essen, Musik und allem, was das Herz berührt.
-        Wir freuen uns riesig, diesen unvergesslichen Moment mit dir zu teilen!
-      </p>
-      <p>
-        Auf dieser Homepage findest du alle wichtigen Informationen rund um unsere Hochzeit –
-        von Ablauf über Unterkunft bis hin zu Geschenken. Wir halten alles stets aktuell,
-        damit du immer bestens informiert bist.
-      </p>
-      <p>
-        Solltest du trotzdem noch Fragen haben, stehen wir – und natürlich auch unsere lieben
-        Trauzeuginnen – dir jederzeit gerne zur Verfügung!
-      </p>
-
-      <button class="callToAction-button">Mehr erfahren</button>
+        <button class="callToAction-button">Mehr erfahren</button>
+      </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts">
