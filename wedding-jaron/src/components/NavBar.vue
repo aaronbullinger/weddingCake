@@ -1,0 +1,69 @@
+<template>
+  <header class="navbar">
+    <!-- Logo -->
+    <div class="homebutton">
+      <RouterLink to="/home">JaAron</RouterLink>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <RouterLink to="/rueckmeldung">Rückmeldung</RouterLink>
+      <RouterLink to="/location">Location</RouterLink>
+      <RouterLink to="/unterkunft">Unterkunft</RouterLink>
+      <RouterLink to="/details">Details</RouterLink>
+      <RouterLink to="/faq">FAQ</RouterLink>
+    </nav>
+  </header>
+</template>
+
+<script setup lang="ts">
+
+</script>
+
+<style scoped>
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  z-index: 1000;
+  padding-bottom: 10px;
+}
+
+.homebutton {
+  color: #3B5D47;
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 5%;
+}
+
+.homebutton a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  padding-right: 15%;
+  padding-top: 10px;
+  font-size: 18px;
+  color: #707070;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: #707070;
+  text-decoration: none;
+}
+
+.nav-links .router-link-active {
+  font-weight: bold;
+  color: #3B5D47;
+}
+</style>

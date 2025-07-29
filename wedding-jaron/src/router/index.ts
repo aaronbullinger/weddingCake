@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Rueckmeldung from '../components/Rueckmeldung.vue'
-import Location from '../components/Location.vue'
-import Unterkunft from '../components/Unterkunft.vue'
-import Details from '../components/Details.vue'
-import Faq from "../components/Faq.vue";
+import Rueckmeldung from '../views/Rueckmeldung.vue'
+import Location from '../views/Location.vue'
+import Unterkunft from '../views/Unterkunft.vue'
+import Details from '../views/Details.vue'
+import Faq from "../views/Faq.vue";
+import Home from "../views/Home.vue";
 
 const routes = [
+    { path: '/home', component: Home },
     { path: '/rueckmeldung', component: Rueckmeldung },
     { path: '/location', component: Location },
     { path: '/unterkunft', component: Unterkunft },
