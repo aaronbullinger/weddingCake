@@ -31,66 +31,57 @@
       <section>
         <h2>Speisen</h2>
         <div class="speisen">
-          <div>
-            <p :style="{ color: !form.name1 ? '#bbb' : 'inherit' }">{{ form.name1 ? form.name1 : 'Name 1' }}</p>
-            <select :disabled="!form.name1" v-model="form.speise1">
+          <div :style="{ color: !form.kind1 ? '#bbb' : 'inherit' }">
+            <select id="speise1" :disabled="!form.name1" v-model="form.speise1">
               <option disabled value="">Speisen</option>
               <option value="Fleisch">Fleisch</option>
               <option value="Vegetarisch">Vegetarisch</option>
               <option value="Fisch">Fisch</option>
               <option value="Vegan">Vegan</option>
             </select>
-          </div>
-          <div>
-            <p :style="{ color: !form.name2 ? '#bbb' : 'inherit' }">{{ form.name2 ? form.name2 : 'Name 2' }}</p>
-            <select :disabled="!form.name2" v-model="form.speise2">
-              <option disabled value="">Speisen</option>
-              <option value="Fleisch">Fleisch</option>
-              <option value="Vegetarisch">Vegetarisch</option>
-              <option value="Fisch">Fisch</option>
-              <option value="Vegan">Vegan</option>
-            </select>
+            <label for="speise1">{{ form.name1 ? form.name1 : 'Name 1' }}</label>
           </div>
           <div :style="{ color: !form.kind1 ? '#bbb' : 'inherit' }">
-            <p>{{ form.kind1 ? form.kind1 : 'Kind 1' }}</p>
-            <select :disabled="!form.kind1" v-model="form.speise3">
+            <select id="speise2" :disabled="!form.name2" v-model="form.speise2">
               <option disabled value="">Speisen</option>
               <option value="Fleisch">Fleisch</option>
               <option value="Vegetarisch">Vegetarisch</option>
               <option value="Fisch">Fisch</option>
               <option value="Vegan">Vegan</option>
             </select>
+            <label for="speise2">{{ form.name2 ? form.name2 : 'Name 2' }}</label>
+          </div>
+          <div :style="{ color: !form.kind1 ? '#bbb' : 'inherit' }">
+            <select id="speise3" :disabled="!form.kind1" v-model="form.speise3">
+              <option disabled value="">Speisen</option>
+              <option value="Fleisch">Fleisch</option>
+              <option value="Vegetarisch">Vegetarisch</option>
+              <option value="Fisch">Fisch</option>
+              <option value="Vegan">Vegan</option>
+            </select>
+            <label for="speise3">{{ form.kind1 ? form.kind1 : 'Kind 1' }}</label>
           </div>
           <div :style="{ color: !form.kind2 ? '#bbb' : 'inherit' }">
-            <p>{{ form.kind2 ? form.kind2 : 'Kind 2' }}</p>
-            <select :disabled="!form.kind2" v-model="form.speise4">
+            <select id="speise4" :disabled="!form.kind2" v-model="form.speise4">
               <option disabled value="">Speisen</option>
               <option value="Fleisch">Fleisch</option>
               <option value="Vegetarisch">Vegetarisch</option>
               <option value="Fisch">Fisch</option>
               <option value="Vegan">Vegan</option>
             </select>
+            <label for="speise4">{{ form.kind2 ? form.kind2 : 'Kind 2' }}</label>
           </div>
         </div>
 
-        <input class="allergien" v-model="form.allergien" />
-        <label class="allergien-label" for="allergien">Allergien</label>
+        <div class="allergien">
+          <input v-model="form.allergien" />
+          <label class="allergien-label" for="allergien">Allergien</label>
+        </div>
 
       </section>
 
-      <!-- Übernachtung
       <section>
         <h2>Übernachtung</h2>
-        <div class="column">
-          <label><input type="radio" value="Zuhause" v-model="form.uebernachtung" /> Übernachtung zu Hause</label>
-          <label><input type="radio" value="Camping" v-model="form.uebernachtung" /> Ich/wir campen vor Ort</label>
-          <label><input type="radio" value="Hotel" v-model="form.uebernachtung" /> Ich/Wir hätten gerne einen Hotelplatz (bitte reservieren).</label>
-        </div>
-      </section> -->
-
-      <section>
-        <h2>Übernachtung</h2>
-        <div class="column">
           <div class="uebernachtung">
             <select  v-model="form.uebernachtung">
               <option disabled value="">Übernachtung</option>
@@ -98,14 +89,15 @@
               <option value="Camping">Ich/wir campen vor Ort</option>
               <option value="Hotel">Ich/Wir hätten gerne einen Hotelplatz (bitte reservieren).</option>
             </select>
-          </div>
         </div>
       </section>
 
       <!-- Nachricht -->
       <section>
-        <label>Möchtest Du uns noch was anderes Wissen lassen?</label>
-        <textarea v-model="form.nachricht" rows="4"></textarea>
+        <div class="nachricht">
+          <label>Möchtest Du uns noch was anderes Wissen lassen?</label>
+          <textarea v-model="form.nachricht" rows="4"></textarea>
+        </div>
       </section>
 
       <!-- Submit -->
@@ -119,12 +111,6 @@ export default {
   name: 'Formular',
   data() {
     return {
-      personen: [
-        { name: '', active: false },
-        { name: '', active: false },
-        { name: '', active: false },
-        { name: '', active: false }
-      ],
       form: {
         name1: '',
         name2: '',
@@ -142,15 +128,6 @@ export default {
     };
   },
   methods: {
-    activatePerson(index: number) {
-      const trimmed = this.personen[index].name.trim();
-      if (trimmed !== '') {
-        this.personen[index].active = true;
-      } else {
-        this.personen[index].active = false;
-        this.form.dropdowns[index] = '';
-      }
-    },
     handleSubmit() {
       console.log('Formulardaten:', this.form, this.personen);
     }
@@ -179,6 +156,16 @@ h2 {
   font-size:  2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.personen .row,
+.personen .input-group,
+.speisen,
+.allergien,
+.uebernachtung,
+.nachricht {
+  max-width: 70vh;
 }
 
 .personen .row{
@@ -188,11 +175,12 @@ h2 {
   padding-bottom: 1rem;
 }
 
+.personen .row:last-child {
+  padding-bottom: 0;
+}
+
 .personen .input-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-right: 4rem;
+  flex: 1 1 0;
 }
 
 .personen .input-label {
@@ -201,8 +189,22 @@ h2 {
   font-size: 0.9rem;
 }
 
-.allergien {
- margin-top: 1rem;
+.personen .input-group input {
+  width: 100%;
+}
+
+.speisen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.speisen label {
+  margin-top: 0.3rem;
+  padding-left: 1rem;
+  font-size: 0.9rem;
 }
 
 .allergien-label {
@@ -211,21 +213,20 @@ h2 {
   font-size: 0.9rem;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+.uebernachtung {
+  margin-bottom: 2rem;
 }
 
-.column label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.nachricht label {
+  margin-top: 0.3rem;
+  padding-left: 1rem;
+  font-size: 0.9rem;
 }
 
 input,
-textarea {
+textarea,
+select{
+  box-sizing: border-box;
   border: 1px solid $gravelgrau-color;
   border-radius: 40px;
   padding: 0.6rem 1rem;
