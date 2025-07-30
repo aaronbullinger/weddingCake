@@ -53,9 +53,9 @@
 
 .footer-sections {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 10rem;
+  gap: 7rem;
   width: 100%;
 }
 
