@@ -61,12 +61,12 @@ header {
   padding-right: 15%;
   padding-top: 10px;
   font-size: 18px;
-  color: #707070;
+  color: $gravelgrau-color;
   text-decoration: none;
 }
 
 .nav-links a {
-  color: #707070;
+  color: $gravelgrau-color;
   text-decoration: none;
 }
 
