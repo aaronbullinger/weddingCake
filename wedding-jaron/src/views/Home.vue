@@ -1,8 +1,9 @@
 <template>
   <main>
-    <SaveOurDate></SaveOurDate>
-    <CountdownTimer></CountdownTimer>
-    <HomeInfoBox></HomeInfoBox>
+    <SaveOurDate />
+    <CountdownTimer />
+    <HomeInfoBox />
+    <Timeline />
   </main>
 </template>
 
@@ -10,10 +11,16 @@
 import SaveOurDate from "@/components/home/SaveOurDate.vue";
 import CountdownTimer from "@/components/home/CountdownTimer.vue";
 import HomeInfoBox from "@/components/home/HomeInfoBox.vue";
+import Timeline from "@/components/home/Timeline.vue";
 
 export default {
   name: 'Home',
-  components: { SaveOurDate, CountdownTimer, HomeInfoBox }
+  components: {
+    SaveOurDate,
+    CountdownTimer,
+    HomeInfoBox,
+    Timeline
+  }
 };
 </script>
 
