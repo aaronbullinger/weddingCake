@@ -44,6 +44,7 @@
   color: $waldgruen-color;
   line-height: 0.7;
   text-align: left;
+  padding-right: 200px;
 }
 
 .date-images {
