@@ -1,7 +1,9 @@
 <template>
-  <NavBar></NavBar>
-  <router-view></router-view>
-  <Footer></Footer>
+  <NavBar />
+  <div class="content">
+    <router-view />
+  </div>
+  <Footer />
 </template>
 
 <script>
@@ -15,5 +17,9 @@ export default {
 </script>
 
 <style  lang="scss" >
-
+.content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 </style>
