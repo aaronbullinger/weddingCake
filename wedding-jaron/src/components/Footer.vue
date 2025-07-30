@@ -81,5 +81,6 @@
   color: $espresso-color;
   text-align: center;
   background-color: $waldgruen-color;
+  padding-top: 5rem;
 }
 </style>
