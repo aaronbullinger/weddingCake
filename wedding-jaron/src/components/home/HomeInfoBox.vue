@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 10vw;
+  padding: 10rem 15vw;
   gap: 60px;
 }
 
