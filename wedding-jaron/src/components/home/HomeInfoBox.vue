@@ -41,8 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10rem 15vw;
-  gap: 3.7rem;
+  gap: 3.5rem;
 }
 
 .info-image {
