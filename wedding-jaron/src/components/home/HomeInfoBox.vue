@@ -42,35 +42,35 @@
   align-items: center;
   justify-content: center;
   padding: 10rem 15vw;
-  gap: 60px;
+  gap: 3.7rem;
 }
 
 .info-image {
   flex: 1;
   display: flex;
   justify-content: center;
-  height: 400px;
+  height: 25rem;
 }
 
 .info-image img {
-  width: 150px;
-  height: 400px;
+  width: 9rem;
+  height: 25rem;
   object-fit: cover;
-  border-radius: 100px;
+  border-radius: 6rem;
   filter: grayscale(100%);
-  margin-top: 10px;
-  margin-right: 100px;
+  margin-top: 0.5rem;
+  margin-right: 6rem;
 }
 
 .info-text {
   flex: 2;
-  max-width: 600px;
+  max-width: 37.5rem;
   text-align: left;
 }
 
 .info-text h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   line-height: 1.2;
   font-weight: 400;
   color: $waldgruen-color;
@@ -86,16 +86,16 @@
   line-height: 1.6;
   color: $espresso-color;
   font-family: Helvetica, sans-serif;
-  margin-bottom: 15px;
-  margin-right: -50px;
+  margin-bottom: 0.9rem;
+  margin-right: -3rem;
 }
 
 .callToAction-button {
   background-color: $espresso-color;
   color: white;
-  padding: 10px 20px;
+  padding: 0.5rem 1.25rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   cursor: pointer;
   font-size: 1rem;
 }

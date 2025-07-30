@@ -25,9 +25,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px 10px 0;
+  padding: 0 0.625rem 0.625rem 0;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -39,13 +39,13 @@ header {
   justify-content: space-between;
   background: #fff;
   z-index: 1000;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   width: 100vw;
 }
 
 .homebutton {
   color: $waldgruen-color;
-  font-size: 40px;
+  font-size: 2.5rem ;
   font-weight: bold;
   padding-left: 5%;
 }
@@ -57,10 +57,10 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 2.5rem;
   padding-right: 15%;
-  padding-top: 10px;
-  font-size: 18px;
+  padding-top: 0.6rem ;
+  font-size: 1.1rem;
   color: $gravelgrau-color;
   text-decoration: none;
 }

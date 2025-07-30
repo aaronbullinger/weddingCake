@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 .formular {
-  max-width: 600px;
+  max-width: 37.5rem;
   margin: 2rem auto;
   font-family: sans-serif;
 }
@@ -48,8 +48,8 @@ h2 {
 
 input,
 textarea {
-  border: 1px solid #999;
-  border-radius: 20px;
+  border: 0.625rem solid #999;
+  border-radius: 0.125rem;
   padding: 0.6rem 1rem;
   font-size: 1rem;
   width: 100%;
@@ -69,7 +69,7 @@ button {
   background-color: #777;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   cursor: pointer;
 }
 

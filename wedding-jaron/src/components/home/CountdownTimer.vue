@@ -58,12 +58,12 @@ export default {
 .countdown-timer {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5rem;
   font-family: "Kefa", serif;
   background-color: $waldgruen-color;
   width: 100vw;
-  margin: 60px calc(-50vw + 50%);
-  padding: 20px 0;
+  margin: 3.75rem calc(-50vw + 50%);
+  padding: 1.25rem 0;
 }
 
 .time-box {

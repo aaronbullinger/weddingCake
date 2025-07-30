@@ -35,29 +35,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 1rem;
 }
 
 .save-text {
   font-family: Kefa, serif;
-  font-size: 40px;
+  font-size: 2rem;
   color: $waldgruen-color;
   line-height: 0.7;
   text-align: left;
-  padding-right: 200px;
+  padding-right: 12rem;
 }
 
 .date-images {
   display: flex;
-  gap: 45px;
+  gap: 3rem;
 }
 
 .date-item {
   position: relative;
-  width: 150px;
-  height: 400px;
+  width: 9rem;
+  height: 25rem;
   overflow: hidden;
-  border-radius: 100px;
+  border-radius: 6rem;
 }
 
 .date-item img {
@@ -69,7 +69,7 @@
 
 .date-number {
   position: absolute;
-  bottom: 20px;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 5rem;

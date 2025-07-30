@@ -228,8 +228,8 @@ input,
 textarea,
 select{
   box-sizing: border-box;
-  border: 1px solid $gravelgrau-color;
-  border-radius: 40px;
+  border: 0.0625rem solid $gravelgrau-color;
+  border-radius: 2.5rem;
   padding: 0.6rem 1rem;
   font-size: 0.9rem;
   width: 100%;
@@ -245,7 +245,7 @@ button {
   background-color: #777;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   cursor: pointer;
 }
 

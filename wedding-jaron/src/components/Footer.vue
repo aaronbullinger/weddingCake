@@ -47,7 +47,7 @@
 
 .footer-emoji {
   display: inline-block;
-  width: 25px;
+  width: 1.5rem;
   text-align: start;
 }
 
@@ -60,11 +60,11 @@
 }
 
 .footer-section {
-  flex: 0 1 220px;
-  max-width: 300px;
-  min-width: 300px;
+  flex: 0 1 13.75rem;
+  max-width: 37.5rem;
+  min-width: 18.75rem;
   margin-bottom: 1rem;
-  border-top: 1px solid $salbei-color;
+  border-top: 0.0625rem solid $salbei-color;
   padding-top: 1rem;
 }
 
