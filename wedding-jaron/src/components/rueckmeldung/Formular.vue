@@ -107,6 +107,8 @@
 </template>
 
 <script lang="ts">
+import emailjs from 'emailjs-com';
+
 export default {
   name: 'Formular',
   data() {
@@ -120,7 +122,6 @@ export default {
         speise2: '',
         speise3: '',
         speise4: '',
-        dropdowns: ['', '', '', ''],
         allergien: '',
         uebernachtung: '',
         nachricht: ''
@@ -128,8 +129,33 @@ export default {
     };
   },
   methods: {
-    handleSubmit() {
-      console.log('Formulardaten:', this.form, this.personen);
+    async handleSubmit() {
+      try {
+        await emailjs.send(
+            'service_vu49gyp',
+            'template_oo2pmd6',
+            {
+              to_email: 'aaron.bullinger@gmail.com, jasminberthold@gmx.net',
+              subject: 'Hochzeitsrückmeldung von ' + this.form.name1 + '!',
+              name1: this.form.name1 || 'N/A',
+              name2: this.form.name2 || 'N/A',
+              kind1: this.form.kind1 || 'N/A',
+              kind2: this.form.kind2 || 'N/A',
+              speise1: this.form.speise1 || 'N/A',
+              speise2: this.form.speise2 || 'N/A',
+              speise3: this.form.speise3 || 'N/A',
+              speise4: this.form.speise4 || 'N/A',
+              allergien: this.form.allergien || 'N/A',
+              uebernachtung: this.form.uebernachtung || 'N/A',
+              nachricht: this.form.nachricht || 'N/A'
+            },
+            'RObaLTYxAiY3dEU00'
+        );
+        alert('Formular erfolgreich versendet!');
+      } catch (error) {
+        alert('Fehler beim Versenden.');
+        console.error(error);
+      }
     }
   }
 };
