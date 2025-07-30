@@ -17,7 +17,7 @@
           </p>
       </div>
       <div class="info-image">
-        <img src="@/assets/rueckmeldungImg.png" alt="Paarbild">
+        <img src="@/assets/safeOurDateImg3.png" alt="Paarbild">
       </div>
     </div>
   </main>

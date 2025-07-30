@@ -4,25 +4,25 @@
       <div class="info-text">
 
         <h2>
-          <span class="highlight">Ein Ort, der einfach passt</span><br>
-          Zwischen Wein und Lieblingsmenschen
+          <span class="highlight">Ob Campingbus oder Hotelbett –</span><br>
+          ihr sollt’s gemütlich haben.
         </h2>
 
         <p>
-          Unsere Feier findet im wunderschönen Steinbachhof in Vaihingen an der Enz statt – einem echten Wohlfühlort mitten in den Weinbergen.
-          Rustikales Fachwerk trifft hier auf moderne Eventlocation, dazu ein Innenhof, der zum Anstoßen einlädt, und eine Aussicht, die schon fast kitschig schön ist.
+          Übernachten ganz in der Nähe – wir haben mitgedacht.
         </p>
         <p>
-          Egal ob ihr eher Team Tanzfläche oder Team Weinprobe seid – hier kommt jede*r auf seine Kosten.
-          📌 Die genaue Adresse und alle Infos zur Anfahrt findet ihr weiter unten.<br>🛏️ Wer in der Nähe übernachten will, bekommt von uns natürlich ein paar Tipps.
+          Ihr wollt nach der Feier nicht mehr weit fahren? Können wir absolut verstehen.
+          Deshalb gibt’s direkt vor Ort die Möglichkeit, im Auto oder Camper zu übernachten – ganz unkompliziert auf dem Gelände des Steinbachhofs.
         </p>
         <p>
-          Wir freuen uns riesig, diesen besonderen Tag mit euch an so einem coolen Ort zu feiern!
+          Für alle, die lieber ein richtiges Bett möchten, haben wir ein paar Unterkünfte in der Nähe rausgesucht.
+          Auf Wunsch reservieren wir euch gerne im Vorfeld ein Zimmer – sagt uns einfach Bescheid:
         </p>
 
       </div>
       <div class="info-image">
-        <img src="@/assets/safeOurDateImg1.png" alt="Paarbild">
+        <img src="@/assets/safeOurDateImg2.png" alt="Paarbild">
       </div>
     </div>
   </main>
@@ -75,11 +75,11 @@ main {
   margin-bottom: 20px;
   line-height: 1.2;
   font-weight: 400;
-  color: $nebelblau-color;
+  color: $waldgruen-color;
 }
 
 .info-text h2 .highlight {
-  color: $espresso-color;
+  color: $salbei-color;
   font-weight: bold;
 }
 
