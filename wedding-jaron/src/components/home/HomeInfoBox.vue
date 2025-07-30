@@ -2,7 +2,7 @@
   <!-- Info Box Section-->
   <div class="info-box">
     <div class="info-image">
-      <img src="../assets/homePageInfoImg.png" alt="Paarbild">
+      <img src="../../assets/homePageInfoImg.png" alt="Paarbild">
     </div>
 
     <div class="info-text">

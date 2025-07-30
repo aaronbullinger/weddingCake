@@ -11,15 +11,15 @@
 
     <div class="date-images">
       <div class="date-item">
-        <img src="@/assets/safeOurDateImg1.png" alt="Bild 1">
+        <img src="../../assets/safeOurDateImg1.png" alt="Bild 1">
         <span class="date-number">26</span>
       </div>
       <div class="date-item">
-        <img src="@/assets/safeOurDateImg2.png" alt="Bild 1">
+        <img src="../../assets/safeOurDateImg2.png" alt="Bild 1">
         <span class="date-number">05</span>
       </div>
       <div class="date-item">
-        <img src="@/assets/safeOurDateImg3.png" alt="Bild 1">
+        <img src="../../assets/safeOurDateImg3.png" alt="Bild 1">
         <span class="date-number">26</span>
       </div>
     </div>
