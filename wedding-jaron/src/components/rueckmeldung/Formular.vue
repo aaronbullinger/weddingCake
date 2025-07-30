@@ -148,7 +148,7 @@ main {
   justify-content: center;
   margin-left: 5%;
   margin-right: 48vh;
-  font-family: Kefa, serif;
+  font-family: Helvetica, sans-serif;
   color: $gravelgrau-color;
 }
 
@@ -157,6 +157,7 @@ h2 {
   font-weight: bold;
   margin-bottom: 0.5rem;
   margin-top: 2rem;
+  font-family: Kefa, serif;
 }
 
 .personen .row,

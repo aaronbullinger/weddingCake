@@ -1,16 +1,20 @@
 <template>
   <InfoBox />
   <Formular />
+  <AbschlussText />
 </template>
 
 <script lang="ts">
 import InfoBox from '@/components/rueckmeldung/InfoBox.vue';
 import Formular from '@/components/rueckmeldung/Formular.vue';
+import AbschlussText from "@/components/rueckmeldung/AbschlussText.vue";
 
 export default {
   name: 'Rueckmeldung',
   components: {
-    InfoBox, Formular
+    AbschlussText,
+    InfoBox,
+    Formular
   }
 };
 </script>
