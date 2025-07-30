@@ -1,15 +1,10 @@
 <template>
-  <div id="app">
-
     <NavBar></NavBar>
     <router-view></router-view>
-
-  </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import Home from "./views/Home.vue";
 
 export default {
   name: "App",
@@ -18,10 +13,6 @@ export default {
 </script>
 
 <style>
-#app {
-  padding: 0.5rem 2rem 0.5rem 2rem;
-}
-
 div {
   margin: 0.5rem;
 }
@@ -37,6 +28,5 @@ header {
 
 main {
   margin-top: 80px;
-  padding: 0px 50px 0 50px;
 }
 </style>
