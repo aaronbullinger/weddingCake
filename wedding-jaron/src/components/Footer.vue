@@ -41,7 +41,7 @@
   font-family: Helvetica, sans-serif;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  margin-top: auto;
+  margin-top: 5rem;
   padding: 5rem 5rem 5rem 5rem;
 }
 .footer-sections {

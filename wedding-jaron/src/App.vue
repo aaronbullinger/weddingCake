@@ -18,8 +18,4 @@ export default {
 div {
   margin: 0.5rem;
 }
-
-main {
-  margin-top: 80px;
-}
 </style>
