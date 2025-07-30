@@ -8,6 +8,7 @@ import Faq from "../views/Faq.vue";
 import Home from "../views/Home.vue";
 
 const routes = [
+    { path: '/', redirect: '/home' },
     { path: '/home', component: Home },
     { path: '/rueckmeldung', component: Rueckmeldung },
     { path: '/location', component: Location },
