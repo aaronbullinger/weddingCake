@@ -4,6 +4,7 @@
     <CountdownTimer />
     <HomeInfoBox />
     <Timeline />
+    <OurStory />
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import SaveOurDate from "@/components/home/SaveOurDate.vue";
 import CountdownTimer from "@/components/home/CountdownTimer.vue";
 import HomeInfoBox from "@/components/home/HomeInfoBox.vue";
 import Timeline from "@/components/home/Timeline.vue";
+import OurStory from "@/components/home/OurStory.vue";
 
 export default {
   name: 'Home',
@@ -19,7 +21,8 @@ export default {
     SaveOurDate,
     CountdownTimer,
     HomeInfoBox,
-    Timeline
+    Timeline,
+    OurStory
   }
 };
 </script>
