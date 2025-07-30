@@ -2,9 +2,9 @@
   <footer class="footer">
     <div class="footer-sections">
       <div class="footer-section">
-        <p>📍 Steinbachhof, Vaihingen an der Enz</p>
-        <p>📞 Sophie – 0123 / 456789</p>
-        <p>📞 Marcel – 0123 / 456789</p>
+        <p><span class="footer-emoji">📍</span> Steinbachhof, Vaihingen an der Enz</p>
+        <p><span class="footer-emoji">📞</span> Sophie – 0123 / 456789</p>
+        <p><span class="footer-emoji">📞</span> Marcel – 0123 / 456789</p>
       </div>
 
       <div class="footer-section">
@@ -44,6 +44,13 @@
   margin-top: 5rem;
   padding: 5rem 5rem 5rem 5rem;
 }
+
+.footer-emoji {
+  display: inline-block;
+  width: 25px;
+  text-align: start;
+}
+
 .footer-sections {
   display: flex;
   flex-wrap: wrap;
