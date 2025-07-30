@@ -17,7 +17,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .info-box {
   display: flex;
   align-items: flex-start;
@@ -39,7 +39,7 @@
 }
 
 .info-text h2 .highlight {
-  color: #A8CBB7;
+  color: $salbei-color;
   font-weight: bold;
 }
 

@@ -20,7 +20,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar {
   position: fixed;
   top: 0;
@@ -35,7 +35,7 @@
 }
 
 .homebutton {
-  color: #3B5D47;
+  color: $waldgruen-color;
   font-size: 40px;
   font-weight: bold;
   padding-left: 5%;
@@ -62,7 +62,7 @@
 }
 
 .nav-links .router-link-active {
-  color: #3B5D47;
+  color: $waldgruen-color;
   font-weight: bold;
 }
 </style>

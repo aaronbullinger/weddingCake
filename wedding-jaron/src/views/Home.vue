@@ -115,7 +115,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .save-date-section {
   display: flex;
   justify-content: flex-start;
@@ -126,7 +126,7 @@ export default {
 .save-text {
   font-family: Kefa, serif;
   font-size: 40px;
-  color: #3B5D47;
+  color: $waldgruen-color;
   line-height: 0.7;
   text-align: left;
 }
@@ -158,7 +158,7 @@ export default {
   transform: translateX(-50%);
   font-size: 5rem;
   font-weight: bold;
-  color: #7A9EB1; /* leichtes Blau-Grau */
+  color: $nebelblau-color;
   pointer-events: none;
 }
 
@@ -198,25 +198,25 @@ export default {
   margin-bottom: 20px;
   line-height: 1.2;
   font-weight: 400;
-  color: #3B5D47;
+  color: $waldgruen-color;
 }
 
 .info-text h2 .highlight {
-  color: #A8CBB7;
+  color: $salbei-color;
   font-weight: bold;
 }
 
 .info-text p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #4A2E23;
+  color: $espresso-color;
   font-family: Helvetica, sans-serif;
   margin-bottom: 15px;
   margin-right: -50px;
 }
 
 .callToAction-button {
-  background-color: #4A2E23;
+  background-color: $espresso-color;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -230,7 +230,7 @@ export default {
   justify-content: center;
   gap: 40px;
   font-family: "Kefa", serif;
-  background-color: #3B5D47;
+  background-color: $waldgruen-color;
   width: 100vw;
   margin: 60px calc(-50vw + 50%);
   padding: 20px 0;
@@ -244,7 +244,7 @@ export default {
   display: block;
   font-size: 5rem;
   font-weight: bold;
-  color: #A8CBB7;
+  color: $salbei-color;
 }
 
 .time-box small {

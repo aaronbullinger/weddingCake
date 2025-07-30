@@ -12,7 +12,7 @@ export default {
 };
 </script>
 
-<style>
+<style  lang="scss" >
 div {
   margin: 0.5rem;
 }
