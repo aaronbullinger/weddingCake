@@ -1,9 +1,9 @@
 <template>
   <main>
     <form class="formular" @submit.prevent="handleSubmit">
-      <!-- Person -->
+      <!-- Personen -->
       <section>
-        <h2>Person</h2>
+        <h2>Personen</h2>
         <div class="personen">
           <div class="row">
             <div class="input-group">
@@ -30,22 +30,75 @@
 
       <section>
         <h2>Speisen</h2>
-        <div class="grid-speisen">
-          <label><input type="radio" value="Fleisch" v-model="form.speise" /> Fleisch</label>
-          <label><input type="radio" value="Vegetarisch" v-model="form.speise" /> Vegetarisch</label>
-          <label><input type="radio" value="Fisch" v-model="form.speise" /> Fisch</label>
-          <label><input type="radio" value="Vegan" v-model="form.speise" /> Vegan</label>
+        <div class="speisen">
+          <div>
+            <p :style="{ color: !form.name1 ? '#bbb' : 'inherit' }">{{ form.name1 ? form.name1 : 'Name 1' }}</p>
+            <select :disabled="!form.name1" v-model="form.speise1">
+              <option disabled value="">Speisen</option>
+              <option value="Fleisch">Fleisch</option>
+              <option value="Vegetarisch">Vegetarisch</option>
+              <option value="Fisch">Fisch</option>
+              <option value="Vegan">Vegan</option>
+            </select>
+          </div>
+          <div>
+            <p :style="{ color: !form.name2 ? '#bbb' : 'inherit' }">{{ form.name2 ? form.name2 : 'Name 2' }}</p>
+            <select :disabled="!form.name2" v-model="form.speise2">
+              <option disabled value="">Speisen</option>
+              <option value="Fleisch">Fleisch</option>
+              <option value="Vegetarisch">Vegetarisch</option>
+              <option value="Fisch">Fisch</option>
+              <option value="Vegan">Vegan</option>
+            </select>
+          </div>
+          <div :style="{ color: !form.kind1 ? '#bbb' : 'inherit' }">
+            <p>{{ form.kind1 ? form.kind1 : 'Kind 1' }}</p>
+            <select :disabled="!form.kind1" v-model="form.speise3">
+              <option disabled value="">Speisen</option>
+              <option value="Fleisch">Fleisch</option>
+              <option value="Vegetarisch">Vegetarisch</option>
+              <option value="Fisch">Fisch</option>
+              <option value="Vegan">Vegan</option>
+            </select>
+          </div>
+          <div :style="{ color: !form.kind2 ? '#bbb' : 'inherit' }">
+            <p>{{ form.kind2 ? form.kind2 : 'Kind 2' }}</p>
+            <select :disabled="!form.kind2" v-model="form.speise4">
+              <option disabled value="">Speisen</option>
+              <option value="Fleisch">Fleisch</option>
+              <option value="Vegetarisch">Vegetarisch</option>
+              <option value="Fisch">Fisch</option>
+              <option value="Vegan">Vegan</option>
+            </select>
+          </div>
         </div>
-        <input v-model="form.allergien" placeholder="Allergien" />
+
+        <input class="allergien" v-model="form.allergien" />
+        <label class="allergien-label" for="allergien">Allergien</label>
+
       </section>
 
-      <!-- Übernachtung -->
+      <!-- Übernachtung
       <section>
         <h2>Übernachtung</h2>
         <div class="column">
           <label><input type="radio" value="Zuhause" v-model="form.uebernachtung" /> Übernachtung zu Hause</label>
           <label><input type="radio" value="Camping" v-model="form.uebernachtung" /> Ich/wir campen vor Ort</label>
           <label><input type="radio" value="Hotel" v-model="form.uebernachtung" /> Ich/Wir hätten gerne einen Hotelplatz (bitte reservieren).</label>
+        </div>
+      </section> -->
+
+      <section>
+        <h2>Übernachtung</h2>
+        <div class="column">
+          <div class="uebernachtung">
+            <select  v-model="form.uebernachtung">
+              <option disabled value="">Übernachtung</option>
+              <option value="Zuhause">Übernachtung zu Hause</option>
+              <option value="Camping">Ich/wir campen vor Ort</option>
+              <option value="Hotel">Ich/Wir hätten gerne einen Hotelplatz (bitte reservieren).</option>
+            </select>
+          </div>
         </div>
       </section>
 
@@ -66,12 +119,22 @@ export default {
   name: 'Formular',
   data() {
     return {
+      personen: [
+        { name: '', active: false },
+        { name: '', active: false },
+        { name: '', active: false },
+        { name: '', active: false }
+      ],
       form: {
         name1: '',
         name2: '',
         kind1: '',
         kind2: '',
-        speise: '',
+        speise1: '',
+        speise2: '',
+        speise3: '',
+        speise4: '',
+        dropdowns: ['', '', '', ''],
         allergien: '',
         uebernachtung: '',
         nachricht: ''
@@ -79,9 +142,17 @@ export default {
     };
   },
   methods: {
+    activatePerson(index: number) {
+      const trimmed = this.personen[index].name.trim();
+      if (trimmed !== '') {
+        this.personen[index].active = true;
+      } else {
+        this.personen[index].active = false;
+        this.form.dropdowns[index] = '';
+      }
+    },
     handleSubmit() {
-      console.log('Formulardaten:', this.form);
-      // z.B. POST an API senden
+      console.log('Formulardaten:', this.form, this.personen);
     }
   }
 };
@@ -117,14 +188,24 @@ h2 {
   padding-bottom: 1rem;
 }
 
-.input-group {
+.personen .input-group {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding-right: 4rem;
 }
 
-.input-label {
+.personen .input-label {
+  margin-top: 0.3rem;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.allergien {
+ margin-top: 1rem;
+}
+
+.allergien-label {
   margin-top: 0.3rem;
   padding-left: 1rem;
   font-size: 0.9rem;
@@ -145,15 +226,11 @@ h2 {
 
 input,
 textarea {
-  border: 1px solid #999;
-  border-radius: 20px;
+  border: 1px solid $gravelgrau-color;
+  border-radius: 40px;
   padding: 0.6rem 1rem;
   font-size: 0.9rem;
   width: 100%;
-}
-
-input[type="radio"] {
-  margin-right: 0.5rem;
 }
 
 textarea {
