@@ -41,12 +41,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '@/styles/variables.scss';
 .timeline-wrapper {
   background-color: $nebelblau-color;
-  min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%;
@@ -65,12 +63,12 @@ export default {
   text-align: center;
   font-size: 2rem;
   color: $espresso-color;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .vertical-line {
   position: absolute;
-  top: 8.5rem;
+  top: 9rem;
   bottom: 0;
   width: 0.05rem;
   background-color: white;

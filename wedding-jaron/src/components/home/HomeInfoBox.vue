@@ -42,6 +42,7 @@
   align-items: center;
   justify-content: center;
   gap: 3.5rem;
+  margin: 0 auto;
 }
 
 .info-image {
