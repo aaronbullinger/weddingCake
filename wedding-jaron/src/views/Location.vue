@@ -1,5 +1,7 @@
 <template>
-  <InfoBox />
+  <main>
+    <InfoBox />
+  </main>
 </template>
 
 <script lang="ts">

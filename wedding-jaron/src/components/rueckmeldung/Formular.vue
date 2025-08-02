@@ -1,5 +1,4 @@
 <template>
-  <main>
     <form class="formular" @submit.prevent="handleSubmit">
       <!-- Personen -->
       <section>
@@ -103,7 +102,6 @@
       <!-- Submit -->
       <button type="submit">Absenden</button>
     </form>
-  </main>
 </template>
 
 <script lang="ts">
@@ -162,18 +160,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-main {
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-}
-
 .formular {
   flex-direction: column;
   align-items: start;
   text-align: left;
   justify-content: center;
-  margin-left: 5%;
-  margin-right: 48vh;
   font-family: Helvetica, sans-serif;
   color: $gravelgrau-color;
 }

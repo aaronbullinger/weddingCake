@@ -1,7 +1,9 @@
 <template>
-  <InfoBox />
-  <Formular />
-  <AbschlussText />
+  <main>
+    <InfoBox />
+    <Formular />
+    <AbschlussText />
+  </main>
 </template>
 
 <script lang="ts">

@@ -1,5 +1,4 @@
 <template>
-  <main>
     <div class="timeline-wrapper">
       <div class="timeline-container">
         <h2 class="timeline-title">Wir</h2>
@@ -17,7 +16,6 @@
         </div>
       </div>
     </div>
-  </main>
 </template>
 
 <script lang="ts">

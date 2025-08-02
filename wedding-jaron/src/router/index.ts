@@ -6,6 +6,7 @@ import Unterkunft from '@/views/Unterkunft.vue'
 import Details from '@/views/Details.vue'
 import Faq from "@/views/Faq.vue";
 import Home from "@/views/Home.vue";
+import PhotoGallery from "@/views/PhotoGallery.vue";
 
 const routes = [
     { path: '/', redirect: '/home' },
@@ -15,6 +16,7 @@ const routes = [
     { path: '/unterkunft', component: Unterkunft },
     { path: '/details', component: Details },
     { path: '/faq', component: Faq },
+    { path: '/photoGallery', component: PhotoGallery },
 ]
 
 const router = createRouter({

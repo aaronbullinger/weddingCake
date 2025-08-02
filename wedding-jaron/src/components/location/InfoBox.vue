@@ -1,5 +1,4 @@
 <template>
-  <main>
     <div class="info-box">
       <div class="info-text">
 
@@ -25,7 +24,6 @@
         <img src="@/assets/safeOurDateImg1.png" alt="Paarbild">
       </div>
     </div>
-  </main>
 </template>
 
 <script lang="ts">
@@ -33,11 +31,6 @@
 </script>
 
 <style scoped lang="scss">
-main {
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-}
-
 .info-box {
   display: flex;
   align-items: center;

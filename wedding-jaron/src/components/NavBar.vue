@@ -12,6 +12,7 @@
       <RouterLink to="/unterkunft">Unterkunft</RouterLink>
       <RouterLink to="/details">Details</RouterLink>
       <RouterLink to="/faq">FAQ</RouterLink>
+      <RouterLink to="/photoGallery">Photo</RouterLink>
     </nav>
   </header>
 </template>
