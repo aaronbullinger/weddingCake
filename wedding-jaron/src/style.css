@@ -7,6 +7,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --salbei-color: #A8CBB7;
+  --waldgruen-color: #3B5D47;
+  --sandstein-color: #F5EFE3;
+  --espresso-color: #4A2E23;
+  --nebelblau-color: #7A9EB1;
+  --gravelgrau-color: #707070;
+  --lightblue-color: #CAD9DB;
 }
 
 body {
@@ -18,6 +26,17 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+
+#app {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .content {
@@ -45,13 +64,34 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--espresso-color);
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 2rem;
+  background-color: var(--espresso-color);
+  color: var(--sandstein-color);
+  border: none;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
+
+button:hover {
+  background-color: var(--sandstein-color);
+  color: var(--espresso-color);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--sandstein-color);
+  outline: none;
+  background-color: #f1f1f1;
+}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,16 +99,6 @@ button:focus-visible {
 
 .card {
   padding: 2em;
-}
-
-#app {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {

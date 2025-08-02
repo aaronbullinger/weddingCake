@@ -162,11 +162,16 @@ export default {
 <style scoped lang="scss">
 .formular {
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+  justify-items: center;
   text-align: left;
   justify-content: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 5rem;
   font-family: Helvetica, sans-serif;
-  color: $gravelgrau-color;
+  color: $sandstein-color;
+  background-color: $waldgruen-color;
 }
 
 h2 {
@@ -223,6 +228,7 @@ h2 {
   margin-top: 0.3rem;
   padding-left: 1rem;
   font-size: 0.9rem;
+  color: $sandstein-color;
 }
 
 .allergien-label {
@@ -245,7 +251,7 @@ input,
 textarea,
 select{
   box-sizing: border-box;
-  border: 0.0625rem solid $gravelgrau-color;
+  border: 0.0625rem solid $sandstein-color;
   border-radius: 2.5rem;
   padding: 0.6rem 1rem;
   font-size: 0.9rem;
@@ -257,23 +263,7 @@ textarea {
 }
 
 button {
-  margin-top: 1rem;
-  padding: 0.6rem 2rem;
-  background-color: #777;
-  color: white;
-  border: none;
-  border-radius: 1.25rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #555;
-}
-
-input:focus,
-textarea:focus {
-  border-color: $gravelgrau-color;
-  outline: none;
-  background-color: #f1f1f1;
+  display: block;
+  margin: 2rem auto 0 auto;
 }
 </style>

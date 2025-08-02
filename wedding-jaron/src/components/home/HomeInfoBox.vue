@@ -90,14 +90,4 @@
   margin-bottom: 0.9rem;
   margin-right: -3rem;
 }
-
-.callToAction-button {
-  background-color: $espresso-color;
-  color: white;
-  padding: 0.5rem 1.25rem;
-  border: none;
-  border-radius: 0.3rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
 </style>
