@@ -15,9 +15,21 @@
             <br>Unweit von Stuttgart lassen Sie die Hektik des Alltags hinter sich und finden bei uns eine Insel
             der Ruhe und Erholung, eingebettet in sanfte Hügel mit weiten Ausblicken.
           </p>
+
         </div>
         <div class="karte-container">
           <img class="karte" src="@/assets/karte.jpg" alt="Karte" />
+        </div>
+
+        <div class="contact-info">
+          <div class="pin-column">
+            <span class="footer-emoji" aria-hidden="true">📍</span>
+          </div>
+          <div class="address">
+            <p>Steinbachhof Event - GmbH</p>
+            <p>Hofgut Steinbachhof 1</p>
+            <p>71665 Vaihingen/Enz</p>
+          </div>
         </div>
       </div>
     </div>
@@ -33,13 +45,12 @@ export default {
 <style scoped lang="scss">
 .background-card {
   background-color: $nebelblau-color;
-  padding: 5rem 2rem; // damit Inhalt nicht an Rand klebt
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 75vw;
 }
-
-
 
 .description {
   width: 100%;
@@ -62,6 +73,7 @@ h4 {
 }
 
 .description-block {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -86,10 +98,43 @@ h4 {
 
 .karte {
   width: 100%;
-  height: auto;               // 🟢 wichtig für korrektes Seitenverhältnis
+  height: auto;
   max-height: 25rem;
-  aspect-ratio: auto;         // optional – erlaubt Browser das Originalverhältnis zu nehmen
-  object-fit: cover;          // oder contain – je nach gewünschtem Effekt
+  aspect-ratio: auto;
+  object-fit: cover;
   display: block;
+}
+
+.contact-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-top: 1px solid $salbei-color;
+  padding-top: 1rem;
+  width: 30%;
+  max-width: 30%;
+}
+
+.pin-column {
+  width: 1rem;
+  text-align: center;
+}
+
+.emoji {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.address {
+  color: $salbei-color;
+  font-size: 0.9rem;
+  line-height: 1.4;
+
+  p {
+    margin: 0;
+  }
 }
 </style>
