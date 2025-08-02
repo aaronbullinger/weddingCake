@@ -1,4 +1,12 @@
 <template>
+  <div class="background-card">
+    <div class="arrow-down">
+      <img src="@/assets/arrowDown.svg" alt="Pfeil runter"/>
+    </div>
+    <div class="description">
+      <p>Trage in das folgende Formular deine entsprechenden Angaben ein.</p>
+    </div>
+
     <form class="formular" @submit.prevent="handleSubmit">
       <!-- Personen -->
       <section>
@@ -81,13 +89,13 @@
 
       <section>
         <h2>Übernachtung</h2>
-          <div class="uebernachtung">
-            <select  v-model="form.uebernachtung">
-              <option disabled value="">Übernachtung</option>
-              <option value="Zuhause">Übernachtung zu Hause</option>
-              <option value="Camping">Ich/wir campen vor Ort</option>
-              <option value="Hotel">Ich/Wir hätten gerne einen Hotelplatz (bitte reservieren).</option>
-            </select>
+        <div class="uebernachtung">
+          <select  v-model="form.uebernachtung">
+            <option disabled value="">Übernachtung</option>
+            <option value="Zuhause">Übernachtung zu Hause</option>
+            <option value="Camping">Ich/wir campen vor Ort</option>
+            <option value="Hotel">Ich/Wir hätten gerne einen Hotelplatz (bitte reservieren).</option>
+          </select>
         </div>
       </section>
 
@@ -102,6 +110,7 @@
       <!-- Submit -->
       <button type="submit">Absenden</button>
     </form>
+  </div>
 </template>
 
 <script lang="ts">
@@ -160,18 +169,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.formular {
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  text-align: left;
-  justify-content: center;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  padding-bottom: 5rem;
-  font-family: Helvetica, sans-serif;
+p {
   color: $sandstein-color;
-  background-color: $waldgruen-color;
+  font-size: 0.9rem;
+  margin-bottom: 5rem;
 }
 
 h2 {
@@ -247,23 +248,12 @@ h2 {
   font-size: 0.9rem;
 }
 
-input,
-textarea,
-select{
-  box-sizing: border-box;
-  border: 0.0625rem solid $sandstein-color;
-  border-radius: 2.5rem;
-  padding: 0.6rem 1rem;
-  font-size: 0.9rem;
-  width: 100%;
-}
-
 textarea {
   resize: vertical;
 }
 
 button {
   display: block;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 5rem auto;
 }
 </style>
