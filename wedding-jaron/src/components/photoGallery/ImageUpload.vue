@@ -14,13 +14,6 @@
       <img :src="previewUrl" alt="Vorschau" />
     </div>
 
-    <button
-        v-if="selectedFile && !uploadStore.isUploading"
-        @click="uploadToS3"
-    >
-      Hochladen
-    </button>
-
     <p v-if="uploadStore.isUploading">🔄 Upload läuft...</p>
     <p v-if="uploadSuccess">✅ Hochgeladen!</p>
   </div>
@@ -44,18 +37,13 @@ export default {
       fileInput.value?.click();
     };
 
-    const handleFileUpload = (event: Event) => {
+    const handleFileUpload = async (event: Event) => {
       const target = event.target as HTMLInputElement | null;
       const file = target?.files?.[0];
       if (file && file.type.startsWith('image/')) {
         selectedFile.value = file;
         uploadSuccess.value = false;
-
-        const reader = new FileReader();
-        reader.onload = (e: ProgressEvent<FileReader>) => {
-          previewUrl.value = e.target?.result as string;
-        };
-        reader.readAsDataURL(file);
+        await uploadToS3(); // Direkt nach Auswahl hochladen
       } else {
         alert('Bitte wähle eine gültige Bilddatei.');
       }
