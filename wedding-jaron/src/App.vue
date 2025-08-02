@@ -17,9 +17,4 @@ export default {
 </script>
 
 <style  lang="scss" >
-.content {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-}
 </style>

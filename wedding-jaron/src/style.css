@@ -20,12 +20,17 @@ body {
   overflow-x: hidden;
 }
 
+.content {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 main {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 h1 {

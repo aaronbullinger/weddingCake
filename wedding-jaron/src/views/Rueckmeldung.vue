@@ -2,7 +2,6 @@
   <main>
     <InfoBox />
     <Formular />
-    <AbschlussText />
   </main>
 </template>
 
