@@ -43,7 +43,7 @@ export default {
 <style scoped lang="scss">
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
   margin-top: 1.25rem;
   max-width: 44rem;

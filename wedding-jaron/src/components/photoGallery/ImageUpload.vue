@@ -6,13 +6,9 @@
         @change="handleFileUpload"
         accept="image/*"
         hidden
+        multiple
     />
     <button @click="triggerFileInput">Bild auswählen</button>
-
-    <div v-if="previewUrl" class="preview">
-      <h3>Vorschau:</h3>
-      <img :src="previewUrl" alt="Vorschau" />
-    </div>
 
     <p v-if="uploadStore.isUploading">🔄 Upload läuft...</p>
     <p v-if="uploadSuccess">✅ Hochgeladen!</p>
@@ -29,8 +25,7 @@ export default {
     const uploadStore = useUploadStore();
 
     const fileInput = ref<HTMLInputElement | null>(null);
-    const selectedFile = ref<File | null>(null);
-    const previewUrl = ref<string | null>(null);
+    const selectedFiles = ref<File[]>([]);
     const uploadSuccess = ref(false);
 
     const triggerFileInput = () => {
@@ -39,39 +34,46 @@ export default {
 
     const handleFileUpload = async (event: Event) => {
       const target = event.target as HTMLInputElement | null;
-      const file = target?.files?.[0];
-      if (file && file.type.startsWith('image/')) {
-        selectedFile.value = file;
-        uploadSuccess.value = false;
-        await uploadToS3(); // Direkt nach Auswahl hochladen
-      } else {
-        alert('Bitte wähle eine gültige Bilddatei.');
+      const files = target?.files;
+      if (!files) return;
+
+      const validFiles = Array.from(files).filter(file =>
+          file.type.startsWith('image/')
+      );
+
+      if (validFiles.length === 0) {
+        alert('Bitte wähle gültige Bilddateien.');
+        return;
       }
+
+      selectedFiles.value = validFiles;
+      uploadSuccess.value = false;
+
+      await uploadAllToS3(); // Mehrfach-Upload starten
     };
 
-    const uploadToS3 = async () => {
-      if (!selectedFile.value) return;
+    const uploadAllToS3 = async () => {
+      if (!selectedFiles.value.length) return;
 
       uploadStore.setUploading(true);
+
       try {
-        const { data } = await axios.post('http://localhost:3000/api/get-presigned-url', {
-          filename: selectedFile.value.name
-        });
+        for (const file of selectedFiles.value) {
+          const { data } = await axios.post('http://localhost:3000/api/get-presigned-url', {
+            filename: file.name
+          });
 
-        const { uploadUrl, fileUrl } = data;
+          const { uploadUrl, fileUrl } = data;
 
-        // Hochladen zu S3
-        await axios.put(uploadUrl, selectedFile.value, /*{
-          headers: {
-            'Content-Type': selectedFile.value.type,
-          },
-        }*/);
+          await axios.put(uploadUrl, file);
 
-        uploadStore.addUploadedFile({ fileUrl, fileName: selectedFile.value.name });
+          uploadStore.addUploadedFile({ fileUrl, fileName: file.name });
+        }
+
         uploadSuccess.value = true;
       } catch (err) {
         console.error('Fehler beim Upload:', err);
-        alert('Upload fehlgeschlagen.');
+        alert('Mindestens ein Upload ist fehlgeschlagen.');
       } finally {
         uploadStore.setUploading(false);
       }
@@ -79,13 +81,12 @@ export default {
 
     return {
       fileInput,
-      selectedFile,
-      previewUrl,
+      selectedFiles,
       uploadSuccess,
       uploadStore,
       triggerFileInput,
       handleFileUpload,
-      uploadToS3,
+      uploadAllToS3
     };
   },
 };
