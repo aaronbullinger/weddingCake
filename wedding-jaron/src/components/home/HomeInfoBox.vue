@@ -43,6 +43,7 @@
   justify-content: center;
   gap: 3.5rem;
   margin: 0 auto;
+  padding-bottom: 5rem;
 }
 
 .info-image {

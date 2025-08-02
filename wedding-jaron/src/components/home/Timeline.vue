@@ -40,20 +40,18 @@ export default {
 
 <style scoped lang="scss">
 .timeline-wrapper {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   background-color: $nebelblau-color;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-left: 5%;
-  padding-right: 5%;
-  font-family: Kefa, serif;
 }
 
 .timeline-container {
-  background-color: $nebelblau-color;
   padding: 2.5rem;
   width: 100%;
-  max-width: 50rem;
+  max-width: none;
   position: relative;
 }
 
