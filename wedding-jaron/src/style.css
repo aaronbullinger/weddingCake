@@ -80,18 +80,6 @@ h4 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: var(--espresso-color);
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button {
   margin-top: 1rem;
   padding: 0.6rem 2rem;
   background-color: var(--espresso-color);
@@ -162,7 +150,8 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   #app {
-    min-height: 100vh;max-width: 1280px;
+    min-height: 100vh;
+    max-width: 1280px;
     display: flex;
     flex-direction: column;
 
