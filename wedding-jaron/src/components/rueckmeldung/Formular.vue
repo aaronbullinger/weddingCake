@@ -1,7 +1,7 @@
 <template>
   <div class="background-card">
     <div class="arrow-down">
-      <img src="@/assets/arrowDown.svg" alt="Pfeil runter"/>
+      <img src="@/assets/arrowDownSalbei.svg" alt="Pfeil runter"/>
     </div>
     <div class="description">
       <p>Trage in das folgende Formular deine entsprechenden Angaben ein.</p>
@@ -178,9 +178,9 @@ p {
 h2 {
   font-size:  2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
+  margin: 2rem 0 1rem 0;
   font-family: Kefa, serif;
+  color: $sandstein-color;
 }
 
 .personen .row,
@@ -189,7 +189,7 @@ h2 {
 .allergien,
 .uebernachtung,
 .nachricht {
-  max-width: 70vh;
+  max-width: 100vh;
 }
 
 .personen .row{

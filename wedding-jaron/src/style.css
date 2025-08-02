@@ -57,6 +57,22 @@ h1 {
   line-height: 1.1;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--waldgruen-color);
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--waldgruen-color);
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -130,12 +146,12 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   text-align: left;
-  width: 65vw;
+  width: 80vw;
   margin: 5rem auto 0 auto;
   font-family: Helvetica, sans-serif;
   color: var(--sandstein-color);
   background-color: var(--waldgruen-color);
-  border-radius: 25rem 25rem 0 0;
+  border-radius: 40rem 40rem 0 0;
 }
 
 @media (prefers-color-scheme: light) {
