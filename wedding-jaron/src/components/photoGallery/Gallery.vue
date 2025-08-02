@@ -7,7 +7,8 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted } from 'vue'
+import { watch, ref, onMounted } from 'vue'
+import { useUploadStore } from '../../stores/upload'
 import axios from 'axios'
 
 interface Image {
@@ -19,6 +20,7 @@ export default {
   name: 'Gallery',
   setup() {
     const images = ref<Image[]>([]);
+    const uploadStore = useUploadStore();
 
     const fetchImages = async () => {
       try {
@@ -29,15 +31,26 @@ export default {
       }
     };
 
-    onMounted(() => {
-      fetchImages();
-    });
+    onMounted(fetchImages);
+
+    watch(
+        () => uploadStore.uploadedFiles,
+        (newFiles) => {
+          for (const newFile of newFiles) {
+            if (!images.value.find(img => img.fileUrl === newFile.fileUrl)) {
+              images.value.unshift(newFile);
+            }
+          }
+        },
+        { deep: true }
+    );
 
     return {
       images,
     };
   },
 };
+
 </script>
 
 <style scoped lang="scss">
@@ -55,7 +68,6 @@ export default {
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 0.5rem;
 }
 
 .gallery-item img {
@@ -63,7 +75,6 @@ export default {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 0.5rem;
   box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.1);
 }
 </style>
