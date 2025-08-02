@@ -29,7 +29,7 @@
 .info-box {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin-left: 5%;
   gap: 3.7rem;
 }

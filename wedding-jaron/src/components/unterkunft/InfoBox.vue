@@ -37,7 +37,6 @@
   justify-content: center;
   margin-left: 5%;
   gap: 3.7rem;
-  padding-bottom: 10rem;
 }
 
 .info-image {
