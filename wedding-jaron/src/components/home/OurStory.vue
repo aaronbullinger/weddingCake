@@ -52,5 +52,6 @@ h2 {
 p {
   font-family: Helvetica, sans-serif;
   font-size: 0.9rem;
+  color: $espresso-color;
 }
 </style>

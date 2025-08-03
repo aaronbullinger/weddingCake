@@ -59,8 +59,9 @@ export default {
 h3 {
   color: $espresso-color;
   font-family: Kefa, serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 0;
+  font-weight: bold;
 }
 
 h4 {
@@ -110,7 +111,7 @@ h4 {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  border-top: 1px solid $salbei-color;
+  border-top: 1.5px solid $sandstein-color;
   padding-top: 1rem;
   width: 30%;
   max-width: 30%;
@@ -127,7 +128,7 @@ h4 {
 }
 
 .address {
-  color: $salbei-color;
+  color: $sandstein-color;
   font-size: 0.9rem;
   line-height: 1.4;
 

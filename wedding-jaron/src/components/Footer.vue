@@ -53,19 +53,19 @@
 
 .footer-sections {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 7rem;
-  width: 100%;
+  flex-wrap: nowrap; // lässt sie in einer Zeile bleiben
+  justify-content: space-between;
+  gap: 3rem; // vorher 7rem
+  width: 75vw;
+  margin: 0 auto;
+  overflow-x: auto;
 }
 
 .footer-section {
-  flex: 0 1 13.75rem;
-  max-width: 37.5rem;
-  min-width: 18.75rem;
-  margin-bottom: 1rem;
-  border-top: 0.0625rem solid $salbei-color;
-  padding-top: 1rem;
+  flex: 1; // teilt den Platz fair auf
+  min-width: 12rem;
+  max-width: 25rem;
+  border-top: 1px solid $salbei-color;
 }
 
 .footer-section p,
@@ -89,5 +89,10 @@
   text-align: center;
   background-color: $waldgruen-color;
   padding-top: 5rem;
+}
+
+p {
+  font-size: 0.7rem;
+  line-height: 1rem;
 }
 </style>
