@@ -52,7 +52,7 @@ export default {
 
 .description {
   width: 100%;
-  max-width: 70vw;
+  max-width: 60vw;
   margin: 7rem 0 5rem 0;
 }
 

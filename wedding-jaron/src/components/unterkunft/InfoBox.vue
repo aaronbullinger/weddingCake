@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80vw;
+  width: 75vw;
   margin: 0 auto;
   gap: 3.7rem;
 }

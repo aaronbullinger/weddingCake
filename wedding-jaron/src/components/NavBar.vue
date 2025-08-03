@@ -36,10 +36,10 @@
 }
 
 .navbar-content {
-  max-width: 80vw;
+  max-width: 75vw;
   margin: 0 auto;
   display: flex;
-  align-items: center;        /* vertikale Zentrierung */
+  align-items: center;
   justify-content: space-between;
   height: 5rem;
   box-sizing: border-box;
@@ -50,7 +50,7 @@
   font-weight: bold;
   color: $waldgruen-color;
   display: flex;
-  align-items: center;        /* vertikal zentrieren */
+  align-items: center;
 }
 
 .homebutton a {
@@ -67,10 +67,10 @@
 
 .nav-links a {
   display: flex;
-  align-items: center;        /* vertikal zentrieren */
+  align-items: center;
   color: inherit;
   text-decoration: none;
-  padding: 0 0.5rem;          /* nur horizontales Padding */
+  padding: 0 0.5rem;
 }
 
 .nav-links .router-link-active {
