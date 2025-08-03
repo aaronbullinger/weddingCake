@@ -1,20 +1,8 @@
 <template>
   <div class="countdown-timer">
-    <div class="time-box">
-      <span>{{ days }}</span>
-      <small>Tage</small>
-    </div>
-    <div class="time-box">
-      <span>{{ hours }}</span>
-      <small>Stunden</small>
-    </div>
-    <div class="time-box">
-      <span>{{ minutes }}</span>
-      <small>Minuten</small>
-    </div>
-    <div class="time-box">
-      <span>{{ seconds }}</span>
-      <small>Sekunden</small>
+    <div class="time-box" v-for="(label, index) in ['Tage', 'Stunden', 'Minuten', 'Sekunden']" :key="index">
+      <span>{{ [days, hours, minutes, seconds][index] }}</span>
+      <small>{{ label }}</small>
     </div>
   </div>
 </template>
@@ -32,7 +20,6 @@ export default {
     };
   },
   mounted() {
-    this.updateCountdown();
     setInterval(this.updateCountdown, 1000);
   },
   methods: {
@@ -72,12 +59,11 @@ export default {
 }
 
 .time-box span {
-  display: block;
+  display: block; // Sicherstellen, dass die Zahlen als Block angezeigt werden
   font-size: 10rem;
   font-weight: bold;
   color: $salbei-color;
-  margin-bottom: -3rem;
-  margin-top: -3rem;
+  margin: -3rem 0;
 }
 
 .time-box small {
