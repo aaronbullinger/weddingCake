@@ -33,7 +33,7 @@
 <style scoped lang="scss">
 .save-date-section {
   width: 75vw;
-  margin: 3rem auto 5rem auto;
+  margin: 3rem auto 3rem auto;
   display: flex;
   justify-content: center;
   align-items: center;

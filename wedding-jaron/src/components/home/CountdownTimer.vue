@@ -59,7 +59,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 6.5rem;
   font-family: "Kefa", serif;
   background-color: $waldgruen-color;
   width: 100vw;
