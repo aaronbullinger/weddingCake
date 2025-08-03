@@ -32,28 +32,35 @@
 
 <style scoped lang="scss">
 .save-date-section {
+  width: 75vw;
+  margin: 3rem auto 5rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .save-text {
+  flex: 1 1 40%;
   font-family: Kefa, serif;
   color: $waldgruen-color;
   line-height: 0.7;
   text-align: left;
-  padding-right: 12rem;
 
   h1 {
-    font-size: 8rem; // statt 11.9rem
+    font-size: 8rem;
     margin: 0;
+    word-break: break-word;
   }
 }
 
 .date-images {
+  flex: 1 1 55%;
+  max-width: 55%;
   display: flex;
   gap: 3rem;
+  justify-content: center;
 }
 
 .date-item {

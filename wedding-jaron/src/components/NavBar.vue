@@ -59,6 +59,7 @@
 }
 
 .nav-links {
+  /* flex behalten, gap behalten */
   display: flex;
   gap: 2rem;
   font-size: 1.1rem;
@@ -68,13 +69,14 @@
 .nav-links a {
   display: flex;
   align-items: center;
-  color: inherit;
+  color: $salbei-color;
   text-decoration: none;
   padding: 0 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .nav-links .router-link-active {
   color: $waldgruen-color;
-  font-weight: bold;
 }
 </style>
