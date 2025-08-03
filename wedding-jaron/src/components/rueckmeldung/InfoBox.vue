@@ -50,7 +50,7 @@
   border-radius: 6rem;
   filter: grayscale(100%);
   margin-top: 3rem;
-  margin-right: 6rem;
+  margin-right: 5rem;
 }
 
 .info-text {

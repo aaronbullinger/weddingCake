@@ -29,16 +29,18 @@
 .info-box {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 5%;
+  justify-content: space-between;
+  width: 75vw;
+  margin: 0 auto;
   gap: 3.7rem;
 }
 
 .info-image {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   height: 25rem;
+  margin-right: 0;
 }
 
 .info-image img {
@@ -48,7 +50,7 @@
   border-radius: 6rem;
   filter: grayscale(100%);
   margin-top: 3rem;
-  margin-right: 6rem;
+  margin-right: 5rem;
 }
 
 .info-text {
@@ -76,6 +78,5 @@
   color: $espresso-color;
   font-family: Helvetica, sans-serif;
   margin-bottom: 0.9rem;
-  margin-right: -3rem;
 }
 </style>
