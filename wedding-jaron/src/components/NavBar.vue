@@ -25,41 +25,32 @@
 </script>
 
 <style lang="scss" scoped>
-.navbar-content {
-  width: 90vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 0.625rem 0.625rem 0;
-  background-color: #fff;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-}
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  z-index: 1000;
-  padding-bottom: 0.625rem;
   width: 100vw;
+  background: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-content {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;        /* vertikale Zentrierung */
+  justify-content: space-between;
+  height: 5rem;
+  box-sizing: border-box;
 }
 
 .homebutton {
-  color: $waldgruen-color;
-  font-size: 2.5rem ;
+  font-size: 2.5rem;
   font-weight: bold;
-  padding-left: 5%;
+  color: $waldgruen-color;
+  display: flex;
+  align-items: center;        /* vertikal zentrieren */
 }
 
 .homebutton a {
@@ -69,17 +60,17 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
-  padding-right: 15%;
-  padding-top: 0.6rem ;
+  gap: 2rem;
   font-size: 1.1rem;
   color: $salbei-color;
-  text-decoration: none;
 }
 
 .nav-links a {
-  color: $salbei-color;
+  display: flex;
+  align-items: center;        /* vertikal zentrieren */
+  color: inherit;
   text-decoration: none;
+  padding: 0 0.5rem;          /* nur horizontales Padding */
 }
 
 .nav-links .router-link-active {
