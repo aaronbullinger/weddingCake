@@ -1,27 +1,38 @@
 <template>
   <header class="navbar">
-    <!-- Logo -->
-    <div class="homebutton">
-      <RouterLink to="/home">JaAron</RouterLink>
-    </div>
+    <div class="navbar-content">
+      <!-- Logo -->
+      <div class="homebutton">
+        <RouterLink to="/home">JaAron</RouterLink>
+      </div>
 
-    <!-- Navigation -->
-    <nav class="nav-links">
-      <RouterLink to="/rueckmeldung">Rückmeldung</RouterLink>
-      <RouterLink to="/location">Location</RouterLink>
-      <RouterLink to="/unterkunft">Unterkunft</RouterLink>
-      <RouterLink to="/details">Details</RouterLink>
-      <RouterLink to="/faq">FAQ</RouterLink>
-      <RouterLink to="/photoGallery">Photo</RouterLink>
-    </nav>
+      <!-- Navigation -->
+      <nav class="nav-links">
+        <RouterLink to="/rueckmeldung">Rückmeldung</RouterLink>
+        <RouterLink to="/location">Location</RouterLink>
+        <RouterLink to="/unterkunft">Unterkunft</RouterLink>
+        <RouterLink to="/details">Details</RouterLink>
+        <RouterLink to="/faq">FAQ</RouterLink>
+        <RouterLink to="/photoGallery">Photo</RouterLink>
+      </nav>
+    </div>
   </header>
 </template>
+
 
 <script setup lang="ts">
 
 </script>
 
 <style lang="scss" scoped>
+.navbar-content {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -62,12 +73,12 @@ header {
   padding-right: 15%;
   padding-top: 0.6rem ;
   font-size: 1.1rem;
-  color: $gravelgrau-color;
+  color: $salbei-color;
   text-decoration: none;
 }
 
 .nav-links a {
-  color: $gravelgrau-color;
+  color: $salbei-color;
   text-decoration: none;
 }
 

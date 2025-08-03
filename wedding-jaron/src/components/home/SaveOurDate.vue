@@ -40,11 +40,15 @@
 
 .save-text {
   font-family: Kefa, serif;
-  font-size: 2rem;
   color: $waldgruen-color;
   line-height: 0.7;
   text-align: left;
   padding-right: 12rem;
+
+  h1 {
+    font-size: 8rem; // statt 11.9rem
+    margin: 0;
+  }
 }
 
 .date-images {
