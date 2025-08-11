@@ -12,7 +12,7 @@
           <p>
             Wein. Wald. Wohlfühlen.
             Dieses Motto des Naturparks Strombergs spüren Sie bereits bei der Anfahrt zum Steinbachhof.
-            Unweit von Stuttgart lassen Sie die Hektik des Alltags hinter sich und finden bei uns eine Insel
+            <br>Unweit von Stuttgart lassen Sie die Hektik des Alltags hinter sich und finden bei uns eine Insel
             der Ruhe und Erholung, eingebettet in sanfte Hügel mit weiten Ausblicken.
           </p>
 
@@ -77,7 +77,7 @@ h4 {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  max-width: 1000px;
+  max-width: 75vw;
   margin: 3rem auto 0 auto;
   gap: 2rem;
 }

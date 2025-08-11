@@ -34,13 +34,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .content {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
