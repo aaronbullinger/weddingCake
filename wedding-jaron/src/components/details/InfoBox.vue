@@ -3,17 +3,16 @@
       <div class="info-text">
         <h2>
           <span class="highlight">Alle Details auf einen Blick –</span><br>
-          gebt uns doch gerne Feedback
+          damit ihr einfach nur genießen könnt.
         </h2>
 
-        <p>
-          Bitte gib uns kurz Bescheid, ob du an unserem großen Tag dabei bist.
-          Teile uns mit, ob du mit Begleitung oder Kindern kommst,
-          ob es Unverträglichkeiten oder Allergien gibt und ob du eine Übernachtung brauchst.
+        <p class="p-block">
+          Von Ansprechpartner bis Outfit – hier findet ihr alle wichtigen Infos.
         </p>
         <p>
-          Informationen zur Unterkunft und zur Location findest du im Menü unter den jeweiligen Punkten.
-          </p>
+          🤝Eure Ansprechpartner vor Ort
+          <br>Unsere großartigen Trauzeug*innen sind für euch da – bei Fragen, Ideen oder spontanen Geistesblitzen:
+        </p>
       </div>
       <div class="info-image">
         <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Platzhalter" />
@@ -77,6 +76,10 @@
   line-height: 1.6;
   color: $espresso-color;
   font-family: Helvetica, sans-serif;
-  margin-bottom: 0.9rem;
+}
+
+.p-block {
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
 }
 </style>
