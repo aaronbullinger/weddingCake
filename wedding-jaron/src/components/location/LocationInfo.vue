@@ -5,7 +5,7 @@
     </div>
     <div class="description">
       <h3>Feiern auf dem Weingut Steinbachhof</h3>
-      <h4>Eine Location mit besonderem Ambiente</h4>
+      <h4 class="second-header">Eine Location mit besonderem Ambiente</h4>
 
       <div class="description-block">
         <div class="text-container">
@@ -56,19 +56,8 @@ export default {
   margin: 7rem 0 5rem 0;
 }
 
-h3 {
-  color: $espresso-color;
-  font-family: Kefa, serif;
-  font-size: 1.5rem;
-  margin-top: 0;
-  font-weight: bold;
-}
-
-h4 {
-  margin: -1rem 0 0 0;
-  font-size: 1rem;
-  font-weight: bold;
-  color: $sandstein-color;
+.second-header {
+  margin: -1.5rem 0 0 0;
 }
 
 .description-block {
