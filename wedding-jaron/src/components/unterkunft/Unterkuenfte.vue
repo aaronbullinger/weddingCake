@@ -19,7 +19,11 @@
         <h3>Team Camping?</h3>
       </div>
       <div class="camping-map">
-        <img src="@/assets/karte.jpg" alt="Camping Map" />
+        <iframe class="google-maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1556.40386439827!2d8.960192766641338!3d49.00014218683695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47977f4711ec8e97%3A0xf75ad920a6e87d84!2sWeingut%20Steinbachhof%20und%20Steinbachhof%20Event-GmbH!5e0!3m2!1sde!2sde!4v1754946967723!5m2!1sde!2sde"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
       <div class="taxi-text">
         <p>Außerdem steht am Abend ein Taxiunternehmen bereit, das euch auf Wunsch sicher zur Unterkunft bringt.</p>
@@ -77,11 +81,10 @@ a {
   overflow: hidden;
 }
 
-.camping-map img {
+.google-maps {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+  border: 0;
 }
 
 .taxi-text {
