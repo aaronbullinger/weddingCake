@@ -1,3 +1,4 @@
+
 <template>
   <footer class="footer">
     <div class="footer-sections">
@@ -8,16 +9,16 @@
       </div>
 
       <div class="footer-section">
-        <p><a href="#">Rückmeldung</a></p>
-        <p><a href="#">Location</a></p>
-        <p v-if="isVisible"><a href="#">Unterkunft</a></p>
-        <p v-if="isVisible"><a href="#">Details</a></p>
-        <p v-if="isVisible"><a href="#">FAQ</a></p>
+        <p><RouterLink to="/rueckmeldung">Rückmeldung</RouterLink></p>
+        <p><RouterLink to="/location">Location</RouterLink></p>
+        <p v-if="isVisible"><RouterLink to="/unterkunft">Unterkunft</RouterLink></p>
+        <p v-if="isVisible"><RouterLink to="/details">Details</RouterLink></p>
+        <p v-if="isVisible"><RouterLink to="/faq">FAQ</RouterLink></p>
       </div>
 
       <div class="footer-section">
-        <p><a href="#">Impressum</a></p>
-        <p><a href="#">Datenschutz</a></p>
+        <p><RouterLink to="/impressum">Impressum</RouterLink></p>
+        <p><RouterLink to="/datenschutz">Datenschutz</RouterLink></p>
       </div>
     </div>
 
@@ -28,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-  const isVisible = false;
+const isVisible = false;
 </script>
 
 <style lang="scss" scoped>
