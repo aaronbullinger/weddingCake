@@ -10,10 +10,10 @@
       <nav class="nav-links">
         <RouterLink to="/rueckmeldung">Rückmeldung</RouterLink>
         <RouterLink to="/location">Location</RouterLink>
-        <RouterLink to="/unterkunft">Unterkunft</RouterLink>
-        <RouterLink to="/details">Details</RouterLink>
-        <RouterLink to="/faq">FAQ</RouterLink>
-        <RouterLink to="/photoGallery">Photo</RouterLink>
+        <RouterLink v-if="isVisible" to="/unterkunft">Unterkunft</RouterLink>
+        <RouterLink v-if="isVisible" to="/details" >Details</RouterLink>
+        <RouterLink v-if="isVisible" to="/faq">FAQ</RouterLink>
+        <RouterLink v-if="isVisible" to="/photoGallery">Photo</RouterLink>
       </nav>
     </div>
   </header>
@@ -21,7 +21,7 @@
 
 
 <script setup lang="ts">
-
+  const isVisible = false;
 </script>
 
 <style lang="scss" scoped>
