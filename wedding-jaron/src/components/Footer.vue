@@ -3,16 +3,16 @@
     <div class="footer-sections">
       <div class="footer-section">
         <p><span class="footer-emoji">📍</span> Steinbachhof, Vaihingen an der Enz</p>
-        <p><span class="footer-emoji">📞</span> Sophie – 0123 / 456789</p>
-        <p><span class="footer-emoji">📞</span> Marcel – 0123 / 456789</p>
+        <p><span class="footer-emoji">📞</span> Sophie +49 176 61147105</p>
+        <p><span class="footer-emoji">📞</span> Marcel +49 173 6371692</p>
       </div>
 
       <div class="footer-section">
         <p><a href="#">Rückmeldung</a></p>
         <p><a href="#">Location</a></p>
-        <p><a href="#">Unterkunft</a></p>
-        <p><a href="#">Details</a></p>
-        <p><a href="#">FAQ</a></p>
+        <p v-if="isVisible"><a href="#">Unterkunft</a></p>
+        <p v-if="isVisible"><a href="#">Details</a></p>
+        <p v-if="isVisible"><a href="#">FAQ</a></p>
       </div>
 
       <div class="footer-section">
@@ -22,13 +22,13 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2025 JaAron – Powered by Late Nights &amp; guter Pasta.</p>
+      <p>© 2025 JaAron – Powered by Late Nights &amp; guter Pasta</p>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-
+  const isVisible = false;
 </script>
 
 <style lang="scss" scoped>
@@ -42,7 +42,12 @@
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   margin-top: 5rem;
-  padding: 5rem 5rem 5rem 5rem;
+  padding: 3rem 1.5rem;
+
+  // Desktop
+  @media (min-width: 769px) {
+    padding: 5rem 5rem;
+  }
 }
 
 .footer-emoji {
@@ -53,31 +58,73 @@
 
 .footer-sections {
   display: flex;
-  flex-wrap: nowrap; // lässt sie in einer Zeile bleiben
   justify-content: space-between;
-  gap: 3rem; // vorher 7rem
-  width: 75vw;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  overflow-x: auto;
+
+  // Mobile: Stapeln der Sektionen vertikal
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  // Desktop
+  @media (min-width: 769px) {
+    flex-wrap: nowrap;
+    gap: 3rem;
+    width: 75vw;
+  }
 }
 
 .footer-section {
-  flex: 1; // teilt den Platz fair auf
-  min-width: 12rem;
-  max-width: 25rem;
+  flex: 1;
   border-top: 1px solid $salbei-color;
+  padding-top: 1rem;
+
+  // Mobile
+  @media (max-width: 768px) {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+  }
+
+  // Desktop
+  @media (min-width: 769px) {
+    min-width: 12rem;
+    max-width: 25rem;
+  }
 }
 
 .footer-section p,
 .footer-section a {
   color: $salbei-color;
-  margin: 0.3rem 0;
+  margin: 0.1rem 0; // Reduziert von 0.3rem auf 0.1rem
   text-decoration: none;
   text-align: left;
+
+  // Mobile: Größerer Touch-Target für Links
+  @media (max-width: 768px) {
+    padding: 0.1rem 0; // Reduziert von 0.2rem auf 0.1rem
+    font-size: 0.8rem;
+  }
 }
 
-.footer-section a:hover {
+.footer-section a:hover,
+.footer-section a:focus {
   text-decoration: underline;
+}
+
+// Mobile: Bessere Touch-Targets
+@media (max-width: 768px) {
+  .footer-section a {
+    display: inline-block;
+    min-height: 2rem; // Reduziert von 2.5rem auf 2rem
+    line-height: 2rem; // Reduziert von 2.5rem auf 2rem
+    padding: 0;
+  }
 }
 
 .footer-bottom {
@@ -88,11 +135,29 @@
   color: $espresso-color;
   text-align: center;
   background-color: $waldgruen-color;
-  padding-top: 5rem;
+  padding-top: 3rem;
+
+  // Mobile
+  @media (max-width: 768px) {
+    padding-top: 2rem;
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+
+  // Desktop
+  @media (min-width: 769px) {
+    padding-top: 5rem;
+  }
 }
 
 p {
   font-size: 0.7rem;
   line-height: 1rem;
+
+  // Mobile: Etwas größere Schrift für bessere Lesbarkeit
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
 }
 </style>
