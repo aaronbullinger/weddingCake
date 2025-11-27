@@ -52,6 +52,19 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  // Mobile - Vollbreite mit perfekter Zentrierung
+  @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 0.5rem;
+  }
 }
 
 .description {
@@ -130,6 +143,108 @@ export default {
 
   p {
     margin: 0;
+  }
+}
+
+// Mobile Responsive Design
+@media (max-width: 768px) {
+  .description {
+    max-width: 90vw;
+    margin: 4rem 0 3rem 0;
+    padding: 0 1rem;
+  }
+
+  .description h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .description h4 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .description-block {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .text-container {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .text-container p {
+    max-width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .camping-map {
+    width: 100%;
+    max-width: 25rem;
+    height: 25rem;
+    order: 2;
+  }
+
+  .contact-info {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 1.5rem;
+    order: 3;
+    padding: 1rem 0;
+    border-top: 1.5px solid $sandstein-color;
+    border-bottom: none;
+  }
+
+  .address {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    max-width: 95vw;
+    margin: 3rem 0 2rem 0;
+    padding: 0 0.5rem;
+  }
+
+  .description h3 {
+    font-size: 1.3rem;
+  }
+
+  .description h4 {
+    font-size: 1rem;
+  }
+
+  .text-container p {
+    font-size: 0.85rem;
+    br {
+      display: none;
+    }
+  }
+
+  .camping-map {
+    max-width: 20rem;
+    height: 20rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .pin-column {
+    width: auto;
+  }
+
+  .address {
+    font-size: 0.8rem;
   }
 }
 </style>

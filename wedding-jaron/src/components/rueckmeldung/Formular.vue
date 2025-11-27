@@ -184,24 +184,6 @@ export default {
   }
 }
 
-
-.arrow-down {
-  // Mobile arrow size
-  @media (max-width: 768px) {
-    img {
-      width: 2rem;
-      height: 2rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    img {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-  }
-}
-
 .description {
   // Mobile description
   @media (max-width: 768px) {
