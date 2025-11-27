@@ -1,4 +1,3 @@
-
 <template>
   <header class="navbar">
     <div class="navbar-content">
@@ -73,7 +72,7 @@ const closeMobileMenu = () => {
   color: $waldgruen-color;
   display: flex;
   align-items: center;
-  z-index: 1001;
+  z-index: 1002;
 }
 
 .homebutton a {
@@ -91,7 +90,7 @@ const closeMobileMenu = () => {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1001;
+  z-index: 1002;
 
   span {
     width: 2rem;
@@ -149,6 +148,8 @@ const closeMobileMenu = () => {
   .navbar-content {
     max-width: 95vw;
     padding: 0 1rem;
+    justify-content: space-between;
+    position: relative;
   }
 
   .homebutton {
@@ -157,33 +158,41 @@ const closeMobileMenu = () => {
 
   .hamburger-menu {
     display: flex;
+    margin-bottom: 1rem;
   }
 
   .nav-links {
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70vw;
-    height: 100vh;
+    top: 5rem;
+    right: -100vw;
+    width: 100vw; // Volle Breite statt 50vw
+    height: auto;
+    max-height: calc(100vh - 5rem);
     background: #fff;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 3rem;
+    gap: 0;
+    padding: 1rem 0;
     transition: right 0.3s ease-in-out;
-    box-shadow: -0.25rem 0 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    border-radius: 0; // Keine abgerundeten Ecken für volle Breite
+    z-index: 1001;
 
     &.mobile-open {
       right: 0;
     }
 
     a {
-      font-size: 1.25rem;
-      padding: 1rem;
-      width: 80%;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      width: 90%;
       text-align: center;
-      border-radius: 0.5rem;
+      border-radius: 0.25rem;
+      margin: 0.25rem 0;
       transition: all 0.3s ease;
+      position: relative;
+      z-index: 1002;
 
       &:hover {
         background: rgba($waldgruen-color, 0.1);
@@ -199,11 +208,11 @@ const closeMobileMenu = () => {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3); // Weniger stark abgedunkelt
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 999;
+    z-index: 1000; // Niedriger z-index als die Navigation
 
     &.active {
       opacity: 1;
@@ -249,11 +258,12 @@ const closeMobileMenu = () => {
   }
 
   .nav-links {
-    width: 80vw;
-    gap: 2.5rem;
+    top: 4rem;
+    width: 100vw; // Auch hier volle Breite statt 60vw
 
     a {
-      font-size: 1.1rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
     }
   }
 }
