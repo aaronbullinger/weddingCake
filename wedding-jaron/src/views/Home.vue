@@ -28,5 +28,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home-container {
+  width: 100%;
+  overflow-x: hidden; // Prevent horizontal scrolling
 
+  // Mobile spacing adjustments
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
 </style>

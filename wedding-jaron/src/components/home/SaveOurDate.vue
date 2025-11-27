@@ -32,13 +32,23 @@
 
 <style scoped lang="scss">
 .save-date-section {
-  width: 75vw;
-  margin: 3rem auto 3rem auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   overflow: hidden;
+
+  // Mobile First - Tablet and below
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+    width: 95%;
+    margin: 1.5rem auto;
+  }
 }
 
 .save-text {
@@ -52,6 +62,29 @@
     font-size: 8rem;
     margin: 0;
     word-break: break-word;
+
+    // Tablet
+    @media (max-width: 1024px) {
+      font-size: 6rem;
+    }
+
+    // Mobile
+    @media (max-width: 768px) {
+      font-size: 4rem;
+      text-align: center;
+      line-height: 0.8;
+    }
+
+    // Small Mobile
+    @media (max-width: 480px) {
+      font-size: 3rem;
+    }
+  }
+
+  // Mobile layout adjustment
+  @media (max-width: 768px) {
+    flex: none;
+    text-align: center;
   }
 }
 
@@ -61,6 +94,24 @@
   display: flex;
   gap: 3rem;
   justify-content: center;
+
+  // Tablet
+  @media (max-width: 1024px) {
+    gap: 2rem;
+  }
+
+  // Mobile
+  @media (max-width: 768px) {
+    flex: none;
+    max-width: 100%;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+
+  // Small Mobile - Stack vertically if needed
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+  }
 }
 
 .date-item {
@@ -69,13 +120,34 @@
   height: 25rem;
   overflow: hidden;
   border-radius: 6rem;
-}
 
-.date-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
+  // Tablet
+  @media (max-width: 1024px) {
+    width: 7rem;
+    height: 20rem;
+    border-radius: 5rem;
+  }
+
+  // Mobile
+  @media (max-width: 768px) {
+    width: 5rem;
+    height: 15rem;
+    border-radius: 4rem;
+  }
+
+  // Small Mobile
+  @media (max-width: 480px) {
+    width: 4rem;
+    height: 12rem;
+    border-radius: 3rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
 }
 
 .date-number {
@@ -87,5 +159,23 @@
   font-weight: bold;
   color: $nebelblau-color;
   pointer-events: none;
+
+  // Tablet
+  @media (max-width: 1024px) {
+    font-size: 4rem;
+    bottom: 1rem;
+  }
+
+  // Mobile
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    bottom: 0.8rem;
+  }
+
+  // Small Mobile
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+    bottom: 0.6rem;
+  }
 }
 </style>
