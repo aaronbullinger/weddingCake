@@ -169,34 +169,117 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.background-card {
+  // Mobile - Vollbreite mit perfekter Zentrierung
+  @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+
+.arrow-down {
+  // Mobile arrow size
+  @media (max-width: 768px) {
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.description {
+  // Mobile description
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.formular {
+  max-width: 37.5rem;
+  margin: 2rem auto;
+  font-family: sans-serif;
+
+  // Mobile formular
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0.5rem auto;
+  }
+}
+
 p {
   color: $sandstein-color;
   font-size: 0.9rem;
   margin-bottom: 5rem;
+
+  // Mobile
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+  }
 }
 
 h2 {
-  font-size:  2rem;
+  font-size: 2rem;
   font-weight: bold;
   margin: 2rem 0 1rem 0;
   font-family: Kefa, serif;
   color: $sandstein-color;
+
+  // Mobile
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    margin: 1.5rem 0 0.8rem 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+    margin: 1rem 0 0.6rem 0;
+  }
 }
 
-.personen .row,
-.personen .input-group,
-.speisen,
-.allergien,
-.uebernachtung,
-.nachricht {
-  max-width: 100vh;
-}
-
-.personen .row{
+.personen .row {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   padding-bottom: 1rem;
+
+  // Mobile - Stack vertically
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.6rem;
+  }
 }
 
 .personen .row:last-child {
@@ -211,6 +294,15 @@ h2 {
   margin-top: 0.3rem;
   padding-left: 1rem;
   font-size: 0.9rem;
+
+  // Mobile
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 }
 
 .personen .input-group input {
@@ -223,6 +315,16 @@ h2 {
   grid-template-rows: auto auto;
   gap: 1rem;
   margin-bottom: 1rem;
+
+  // Mobile - Single column
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.6rem;
+  }
 }
 
 .speisen label {
@@ -230,30 +332,101 @@ h2 {
   padding-left: 1rem;
   font-size: 0.9rem;
   color: $sandstein-color;
+
+  // Mobile
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 }
 
 .allergien-label {
   margin-top: 0.3rem;
   padding-left: 1rem;
   font-size: 0.9rem;
+
+  // Mobile
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 }
 
 .uebernachtung {
   margin-bottom: 2rem;
+
+  // Mobile
+  @media (max-width: 768px) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 1rem;
+  }
 }
 
 .nachricht label {
   margin-top: 0.3rem;
   padding-left: 1rem;
   font-size: 0.9rem;
+
+  // Mobile
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding-left: 0;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
+}
+
+// Mobile input styling
+input, select, textarea {
+  // Mobile
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
 }
 
 textarea {
   resize: vertical;
+
+  // Mobile
+  @media (max-width: 768px) {
+    min-height: 3rem;
+  }
 }
 
 button {
   display: block;
   margin: 2rem auto 5rem auto;
+
+  // Mobile
+  @media (max-width: 768px) {
+    margin: 1.5rem auto 3rem auto;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 480px) {
+    margin: 1rem auto 2rem auto;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }
 </style>
