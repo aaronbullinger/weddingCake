@@ -1,22 +1,28 @@
+
 <template>
   <div class="info-box">
     <div class="info-text">
+
       <h2>
-        <span class="highlight">Damit wir besser planen können</span><br>
-        gebt uns doch gerne Feedback
+        <span class="highlight">Ein Ort, der einfach passt</span><br>
+        Zwischen Wein und Lieblingsmenschen
       </h2>
 
       <p>
-        Bitte gib uns kurz Bescheid, ob du an unserem großen Tag dabei bist.
-        Teile uns mit, ob du mit Begleitung oder Kindern kommst,
-        ob es Unverträglichkeiten oder Allergien gibt und ob du eine Übernachtung brauchst.
+        Unsere Feier findet im wunderschönen Steinbachhof in Vaihingen an der Enz statt – einem echten Wohlfühlort mitten in den Weinbergen.
+        Rustikales Fachwerk trifft hier auf moderne Eventlocation, dazu ein Innenhof, der zum Anstoßen einlädt, und eine Aussicht, die schon fast kitschig schön ist.
       </p>
       <p>
-        Informationen zur Unterkunft und zur Location findest du im Menü unter den jeweiligen Punkten.
+        Egal ob ihr eher Team Tanzfläche oder Team Weinprobe seid – hier kommt jede*r auf seine Kosten.
+        📌 Die genaue Adresse und alle Infos zur Anfahrt findet ihr weiter unten.<br>🛏️ Wer in der Nähe übernachten will, bekommt von uns natürlich ein paar Tipps.
       </p>
+      <p>
+        Wir freuen uns riesig, diesen besonderen Tag mit euch an so einem coolen Ort zu feiern!
+      </p>
+
     </div>
     <div class="info-image">
-      <img src="@/assets/safeOurDateImg3.png" alt="Paarbild">
+      <img src="@/assets/safeOurDateImg1.png" alt="Paarbild">
     </div>
   </div>
 </template>
@@ -30,13 +36,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 75vw;
+  max-width: 75vw;
+  width: 100%;
   margin: 0 auto;
   gap: 3.7rem;
+  box-sizing: border-box;
 
   // Tablet
-  @media (max-width: 1024px) {
-    width: 90vw;
+  @media (max-width: 1024px) and (min-width: 769px) {
+    max-width: 90vw;
     gap: 2rem;
     flex-direction: row;
     text-align: center;
@@ -45,20 +53,22 @@
 
   // Mobile
   @media (max-width: 768px) {
-    width: 95vw;
+    max-width: 95vw;
     gap: 1.5rem;
     flex-direction: row;
     padding: 0 1rem;
     padding-top: 1rem;
+    box-sizing: border-box;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
-    width: calc(100vw - 1rem);
+    max-width: 95vw;
     gap: 0.5rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     flex-direction: row;
     margin: 0 auto;
+    box-sizing: border-box;
   }
 }
 
@@ -110,6 +120,7 @@
     width: 6rem;
     height: 15rem;
     border-radius: 3rem;
+    margin-right: 0;
   }
 
   // Small Mobile
@@ -117,6 +128,7 @@
     width: 5rem;
     height: 12rem;
     border-radius: 2.5rem;
+    margin-right: 0;
   }
 }
 
