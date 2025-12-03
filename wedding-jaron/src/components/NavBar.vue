@@ -80,6 +80,7 @@ const closeMobileMenu = () => {
   color: inherit;
 }
 
+
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -91,6 +92,14 @@ const closeMobileMenu = () => {
   cursor: pointer;
   padding: 0;
   z-index: 1002;
+  outline: none; // Entfernt den Fokus-Rahmen
+
+  // Alternative: Fokus-Rahmen nur ausblenden, aber Barrierefreiheit beibehalten
+  &:focus {
+    outline: none;
+    // Optional: Eigenen Fokus-Stil definieren
+    // box-shadow: 0 0 0 2px rgba($waldgruen-color, 0.3);
+  }
 
   span {
     width: 2rem;
