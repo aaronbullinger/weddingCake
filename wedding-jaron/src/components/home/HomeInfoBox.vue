@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
   const isVisible = false;
 </script>
 
