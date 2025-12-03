@@ -123,21 +123,21 @@
 
   // Tablet
   @media (max-width: 1024px) {
-    width: 7rem;
+    width: 9rem;
     height: 20rem;
     border-radius: 5rem;
   }
 
   // Mobile
   @media (max-width: 768px) {
-    width: 5rem;
+    width: 8rem;
     height: 15rem;
     border-radius: 4rem;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
-    width: 4rem;
+    width: 6rem;
     height: 12rem;
     border-radius: 3rem;
   }
@@ -155,26 +155,26 @@
   bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: bold;
   color: $nebelblau-color;
   pointer-events: none;
 
   // Tablet
   @media (max-width: 1024px) {
-    font-size: 4rem;
+    font-size: 6rem;
     bottom: 1rem;
   }
 
   // Mobile
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 5rem;
     bottom: 0.8rem;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     bottom: 0.6rem;
   }
 }

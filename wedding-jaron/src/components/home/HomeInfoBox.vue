@@ -68,9 +68,10 @@
   }
 
   img {
-    width: 9rem;
+    width: 12rem;
     height: 25rem;
     object-fit: cover;
+    object-position: 70% center;
     border-radius: 6rem;
     filter: grayscale(100%);
     margin-top: 0.5rem;
@@ -78,25 +79,25 @@
 
     // Tablet
     @media (max-width: 1024px) {
-      width: 7rem;
+      width: 12rem;
       height: 20rem;
-      border-radius: 5rem;
+      border-radius: 6rem;
       margin-right: 3rem;
     }
 
     // Mobile
     @media (max-width: 768px) {
-      width: 6rem;
+      width: 11rem;
       height: 18rem;
-      border-radius: 4rem;
+      border-radius: 5rem;
       margin: 0;
     }
 
     // Small Mobile
     @media (max-width: 480px) {
-      width: 5rem;
+      width: 9rem;
       height: 15rem;
-      border-radius: 3rem;
+      border-radius: 4rem;
     }
   }
 }
