@@ -100,7 +100,6 @@ export default {
 
   // Small Mobile
   @media (max-width: 480px) {
-    gap: 0;
     padding: 0.8rem 0.25rem;
   }
 
