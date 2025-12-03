@@ -22,7 +22,7 @@
 
     </div>
     <div class="info-image">
-      <img src="@/assets/safeOurDateImg1.png" alt="Paarbild">
+      <img src="@/assets/safeOurDateImg3.png" alt="Paarbild">
     </div>
   </div>
 </template>
@@ -88,12 +88,14 @@
 
   // Mobile
   @media (max-width: 768px) {
+    justify-content: center;
     height: 15rem;
     margin: 0;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
+    justify-content: flex-start;
     height: 12rem;
   }
 }

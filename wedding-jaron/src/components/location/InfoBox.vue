@@ -88,12 +88,14 @@
 
   // Mobile
   @media (max-width: 768px) {
+    justify-content: center;
     height: 15rem;
     margin: 0;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
+    justify-content: flex-start;
     height: 12rem;
   }
 }
@@ -159,7 +161,7 @@
   margin-bottom: 1.25rem;
   line-height: 1.2;
   font-weight: 400;
-  color: $waldgruen-color;
+  color: $nebelblau-color;
 
   // Tablet
   @media (max-width: 1024px) {
@@ -182,7 +184,7 @@
 }
 
 .info-text h2 .highlight {
-  color: $salbei-color;
+  color: $espresso-color;
   font-weight: bold;
 }
 
