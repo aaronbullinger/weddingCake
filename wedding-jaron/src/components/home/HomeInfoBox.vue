@@ -27,13 +27,13 @@
         Trauzeuginnen – dir jederzeit gerne zur Verfügung!
       </p>
 
-      <button class="callToAction-button">Mehr erfahren</button>
+      <button v-if="isVisible" class="callToAction-button">Mehr erfahren</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-
+  const isVisible = false;
 </script>
 
 <style scoped lang="scss">
