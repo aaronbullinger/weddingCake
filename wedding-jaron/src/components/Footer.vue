@@ -11,7 +11,7 @@
       <div class="footer-section">
         <p><RouterLink to="/rueckmeldung">Rückmeldung</RouterLink></p>
         <p><RouterLink to="/location">Location</RouterLink></p>
-        <p v-if="isVisible"><RouterLink to="/unterkunft">Unterkunft</RouterLink></p>
+        <p><RouterLink to="/unterkunft">Unterkunft</RouterLink></p>
         <p v-if="isVisible"><RouterLink to="/details">Details</RouterLink></p>
         <p v-if="isVisible"><RouterLink to="/faq">FAQ</RouterLink></p>
       </div>
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-const isVisible = false;
+  const isVisible = false;
 </script>
 
 <style lang="scss" scoped>

@@ -45,16 +45,44 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  // Mobile - Vollbreite mit perfekter Zentrierung
+  @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 0.5rem;
+  }
 }
 
 .hotel, .camping {
   width: 100%;
   max-width: 60vw;
   margin: 7rem 0 5rem 30rem;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin: 0;
+  }
+
+  @media (max-width: 480px) {
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .camping {
-  margin: 7rem 0 5rem 0rem
+  margin: 7rem 0 5rem 0;
 }
 
 .hotel-header, .camping-header {
@@ -79,6 +107,27 @@ a {
   width: 35rem;
   height: 35rem;
   overflow: hidden;
+
+  @media (max-width: 1024px) {
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 25rem;
+    height: 20rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 20rem;
+    height: 16rem;
+    margin: 0 auto;
+  }
+
 }
 
 .google-maps {
@@ -91,5 +140,21 @@ a {
   color: $gravelgrau-color;
   margin-top: 10rem;
   width: 70%;
+  font-weight: bold;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin: 5rem auto auto auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 5rem auto auto auto;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    margin: 5rem auto auto auto;
+  }
 }
 </style>
