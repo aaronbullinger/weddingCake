@@ -33,7 +33,7 @@
 <style scoped lang="scss">
 .save-date-section {
   width: 90%;
-  max-width: 1200px;
+  max-width: 75%;
   margin: 2rem auto;
   padding: 0 1rem;
   display: flex;
@@ -93,7 +93,7 @@
   max-width: 55%;
   display: flex;
   gap: 3rem;
-  justify-content: center;
+  justify-content: flex-end;
 
   // Tablet
   @media (max-width: 1024px) {

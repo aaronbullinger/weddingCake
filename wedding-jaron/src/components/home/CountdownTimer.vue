@@ -1,8 +1,9 @@
+
 <template>
   <div class="countdown-timer">
-    <div class="time-box" v-for="(label, index) in ['Tage', 'Stunden', 'Minuten', 'Sekunden']" :key="index">
-      <span>{{ [days, hours, minutes, seconds][index] }}</span>
-      <small>{{ label }}</small>
+    <div class="time-box" v-for="(item, index) in timeItems" :key="index">
+      <span>{{ item.value }}</span>
+      <small>{{ item.label }}</small>
     </div>
   </div>
 </template>
@@ -16,13 +17,38 @@ export default {
       days: 0,
       hours: 0,
       minutes: 0,
-      seconds: 0
+      seconds: 0,
+      isMobile: false
     };
   },
+  computed: {
+    timeItems() {
+      const items = [
+        { label: 'Tage', value: this.days },
+        { label: 'Stunden', value: this.hours },
+        { label: 'Minuten', value: this.minutes }
+      ];
+
+      // Sekunden nur auf Desktop anzeigen
+      if (!this.isMobile) {
+        items.push({ label: 'Sekunden', value: this.seconds });
+      }
+
+      return items;
+    }
+  },
   mounted() {
+    this.checkIfMobile();
+    window.addEventListener('resize', this.checkIfMobile);
     setInterval(this.updateCountdown, 1000);
   },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.checkIfMobile);
+  },
   methods: {
+    checkIfMobile() {
+      this.isMobile = window.innerWidth <= 768;
+    },
     updateCountdown() {
       const now = new Date();
       const timeDifference = this.targetDate.getTime() - now.getTime();
@@ -61,24 +87,29 @@ export default {
 
   // Mobile
   @media (max-width: 768px) {
-    gap: 2rem;
+    gap: 1.5rem;
     margin: 2rem calc(-50vw + 50%);
     padding: 1rem 0.5rem;
     flex-wrap: wrap;
+    // Grid Layout für Mobile mit 3 Elementen
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
-    gap: 1rem;
+    gap: 0;
     padding: 0.8rem 0.25rem;
   }
 
-  // Very Small Mobile - 2x2 Grid
+  // Very Small Mobile - 3x1 Grid für bessere Darstellung
   @media (max-width: 380px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0.5rem;
     justify-items: center;
   }
 }
@@ -102,19 +133,19 @@ export default {
     // Mobile
     @media (max-width: 768px) {
       font-size: 6rem;
-      margin: -2rem 0;
+      margin: -1rem 0; // Reduziert von -2rem auf -1rem
     }
 
     // Small Mobile
     @media (max-width: 480px) {
       font-size: 4.5rem;
-      margin: -1.5rem 0;
+      margin: -0.5rem 0; // Reduziert von -1.5rem auf -0.5rem
     }
 
     // Very Small Mobile
     @media (max-width: 380px) {
       font-size: 3.5rem;
-      margin: -1rem 0;
+      margin: -0.25rem 0; // Reduziert von -1rem auf -0.25rem
     }
   }
 
