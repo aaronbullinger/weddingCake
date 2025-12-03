@@ -38,23 +38,27 @@
   @media (max-width: 1024px) {
     width: 90vw;
     gap: 2rem;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
+    padding-top: 3rem;
   }
 
   // Mobile
   @media (max-width: 768px) {
     width: 95vw;
     gap: 1.5rem;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0 1rem;
+    padding-top: 1rem;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
-    width: 100vw;
-    gap: 1rem;
+    width: calc(100vw - 1rem);
+    gap: 0.5rem;
     padding: 0 0.5rem;
+    flex-direction: row;
+    margin: 0 auto;
   }
 }
 
@@ -123,18 +127,18 @@
 
   // Tablet
   @media (max-width: 1024px) {
-    text-align: center;
+    text-align: left;
     max-width: 100%;
   }
 
   // Mobile
   @media (max-width: 768px) {
-    text-align: center;
+    text-align: left;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
-    text-align: center;
+    text-align: left;
   }
 }
 
