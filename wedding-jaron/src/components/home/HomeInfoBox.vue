@@ -49,9 +49,10 @@
   // Mobile
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 2rem;
-    padding: 0 1rem 3rem;
+    gap: 1rem;
+    padding: 0 0 3rem;
     text-align: center;
+    max-width: 85%;
   }
 }
 
