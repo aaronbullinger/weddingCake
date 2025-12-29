@@ -6,12 +6,12 @@
           damit ihr einfach nur genießen könnt.
         </h2>
 
-        <p>
+        <p class="p-block">
           Von Ansprechpartner bis Outfit – hier findet ihr alle wichtigen Infos.
         </p>
         <p>
-          🤝 Eure Ansprechpartner<br></br>
-          Unsere großartigen Trauzeug*innen sind für euch da – bei Fragen, Ideen oder spontanen Geistesblitzen:
+          🤝Eure Ansprechpartner vor Ort
+          <br>Unsere großartigen Trauzeug*innen sind für euch da – bei Fragen, Ideen oder spontanen Geistesblitzen:
         </p>
       </div>
       <div class="info-image">
@@ -76,6 +76,10 @@
   line-height: 1.6;
   color: $espresso-color;
   font-family: Helvetica, sans-serif;
-  margin-bottom: 0.9rem;
+}
+
+.p-block {
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
 }
 </style>
