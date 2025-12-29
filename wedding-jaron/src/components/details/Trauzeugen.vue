@@ -34,6 +34,7 @@ export default {
   width: 75vw;
   max-width: 100%;
   margin: 3rem auto 0;
+  margin-bottom: 5rem;
   flex-wrap: wrap;
 }
 
