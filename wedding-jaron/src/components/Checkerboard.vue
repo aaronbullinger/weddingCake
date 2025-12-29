@@ -33,18 +33,18 @@ export default {
   background-image: linear-gradient(
     90deg,
     var(--cb-above-1, transparent) 0 8vw,
-    var(--cb-above-2, #4f634f) 8vw 16vw,
+    var(--cb-above-2, $waldgruen-color) 8vw 16vw,
     var(--cb-above-3, transparent) 16vw 24vw,
-    var(--cb-above-4, #8fa6b6) 24vw 32vw
+    var(--cb-above-4, $nebelblau-color) 24vw 32vw
   );
 }
 
 .checkerboard-below {
   background-image: linear-gradient(
     90deg,
-    var(--cb-below-1, #4a372b) 0 8vw,
+    var(--cb-below-1, $espresso-color) 0 8vw,
     var(--cb-below-2, transparent) 8vw 16vw,
-    var(--cb-below-3, #c7dcc9) 16vw 24vw,
+    var(--cb-below-3, $salbei-color) 16vw 24vw,
     var(--cb-below-4, transparent) 24vw 32vw
   );
 }

@@ -93,8 +93,8 @@
           <select  v-model="form.uebernachtung">
             <option disabled value="">Übernachtung</option>
             <option value="Zuhause">Übernachtung zu Hause</option>
-            <option value="Camping">Ich/wir campen vor Ort</option>
-            <option value="Hotel">Ich/Wir hätten gerne einen Hotelplatz (bitte reservieren).</option>
+            <option value="Camping">Campen vor Ort</option>
+            <option value="Hotel">Übernachtung im Hotel (Bitte selbst reservieren)</option>
           </select>
         </div>
       </section>
