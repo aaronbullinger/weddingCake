@@ -14,9 +14,6 @@
           <br>Unsere großartigen Trauzeug*innen sind für euch da – bei Fragen, Ideen oder spontanen Geistesblitzen:
         </p>
       </div>
-      <div class="info-image">
-        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Platzhalter" />
-      </div>
     </div>
 </template>
 
