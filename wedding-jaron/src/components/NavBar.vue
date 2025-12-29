@@ -18,7 +18,7 @@
         <RouterLink to="/rueckmeldung" @click="closeMobileMenu">Rückmeldung</RouterLink>
         <RouterLink to="/location" @click="closeMobileMenu">Location</RouterLink>
         <RouterLink to="/unterkunft" @click="closeMobileMenu">Unterkunft</RouterLink>
-        <RouterLink v-if="isVisible" to="/details" @click="closeMobileMenu">Details</RouterLink>
+        <RouterLink to="/details" @click="closeMobileMenu">Details</RouterLink>
         <RouterLink v-if="isVisible" to="/faq" @click="closeMobileMenu">FAQ</RouterLink>
         <RouterLink v-if="isVisible" to="/photoGallery" @click="closeMobileMenu">Photo</RouterLink>
       </nav>

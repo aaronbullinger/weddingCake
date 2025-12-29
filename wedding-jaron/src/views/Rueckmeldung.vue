@@ -1,7 +1,8 @@
 <template>
-  <main>
+  <main class="checkerboard-blue">
     <InfoBox />
     <Formular />
+    <Checkerboard />
   </main>
 </template>
 
@@ -9,13 +10,15 @@
 import InfoBox from '@/components/rueckmeldung/InfoBox.vue';
 import Formular from '@/components/rueckmeldung/Formular.vue';
 import AbschlussText from "@/components/rueckmeldung/AbschlussText.vue";
+import Checkerboard from '../components/Checkerboard.vue';
 
 export default {
   name: 'Rueckmeldung',
   components: {
     AbschlussText,
     InfoBox,
-    Formular
+    Formular,
+    Checkerboard
   }
 };
 </script>
@@ -162,5 +165,17 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+.checkerboard-blue {
+  --cb-above-1: transparent;
+  --cb-above-2: #8fa6b6;
+  --cb-above-3: transparent;
+  --cb-above-4: #8fa6b6;
+
+  --cb-below-1: #8fa6b6;
+  --cb-below-2: transparent;
+  --cb-below-3: #8fa6b6;
+  --cb-below-4: transparent;
 }
 </style>

@@ -1,29 +1,43 @@
-
 <template>
   <div class="info-box">
     <div class="info-text">
 
       <h2>
-        <span class="highlight">Damit wir besser Planen können</span><br>
-        gebt uns doch gerne Feedback
+        <span class="highlight">Impressum </span><br>
+        … weil auch Liebe manchmal Bürokratie braucht.
       </h2>
 
       <p>
-        Bitte gib uns kurz Bescheid, ob du an unserem großen Tag dabei bist. Teile uns mit,
-        ob du mit Begleitung oder Kindern kommst, ob es Unverträglichkeiten oder Allergien gibt und ob du eine Übernachtung brauchst.
+        Angaben gemäß § 5 TMG
       </p>
       <p>
-        Informationen zur Unterkunft und zur Location findest du im Menü unter den jeweiligen Punkten.
+        <span style="font-weight: 700; text-transform: uppercase;">Name der Verantwortlichen</span><br>      
+        Aaron Bullinger<br> 
+        Jasmin Berthold
       </p>
-    </div>
-    <div class="info-image">
-      <img src="@/assets/safeOurDateImg3.png" alt="Paarbild">
+      <p>
+        <span style="font-weight: 700; text-transform: uppercase;">Anschrift</span><br> 
+        Bahnhofstraße 2<br>
+        73265 Dettingen unter Teck<br>
+        Deutschland
+      </p>
+      <p>
+        <span style="font-weight: 700; text-transform: uppercase;">Kontakt</span><br> 
+        berthold.jasmin@web.de<br>
+        aaron.bullinger@gmail.de
+      </p>
+      <p>
+        Da es sich um eine rein private, nicht-kommerzielle Website handelt,<br>
+        bestehen gemäß § 55 Abs. 1 RStV keine weiteren Angaben.
+      </p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-
+export default {
+  name: 'Content',
+};
 </script>
 
 <style scoped lang="scss">
@@ -153,10 +167,11 @@
 
 .info-text h2 {
   font-size: 2rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
   line-height: 1.2;
   font-weight: 400;
-  color: $waldgruen-color;
+  color: $nebelblau-color;
 
   // Tablet
   @media (max-width: 1024px) {
@@ -179,7 +194,7 @@
 }
 
 .info-text h2 .highlight {
-  color: $salbei-color;
+  color: $espresso-color;
   font-weight: bold;
 }
 

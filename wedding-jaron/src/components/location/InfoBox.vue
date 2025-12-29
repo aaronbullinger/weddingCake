@@ -13,8 +13,9 @@
         Rustikales Fachwerk trifft hier auf moderne Eventlocation, dazu ein Innenhof, der zum Anstoßen einlädt, und eine Aussicht, die schon fast kitschig schön ist.
       </p>
       <p>
-        Egal ob ihr eher Team Tanzfläche oder Team Weinprobe seid – hier kommt jede*r auf seine Kosten.
-        📌 Die genaue Adresse und alle Infos zur Anfahrt findet ihr weiter unten.<br>🛏️ Wer in der Nähe übernachten will, bekommt von uns natürlich ein paar Tipps.
+        Egal ob ihr eher Team Tanzfläche oder Team Weinprobe seid – hier kommt jede*r auf seine Kosten.<br></br>
+        📌 Die genaue Adresse und alle Infos zur Anfahrt findet ihr weiter unten.<br></br>
+        🛏️ Wer in der Nähe übernachten will, bekommt von uns natürlich ein paar Tipps.
       </p>
       <p>
         Wir freuen uns riesig, diesen besonderen Tag mit euch an so einem coolen Ort zu feiern!

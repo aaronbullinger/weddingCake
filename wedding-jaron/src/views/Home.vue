@@ -5,6 +5,7 @@
     <HomeInfoBox />
     <Timeline />
     <OurStory />
+    <Checkerboard />
   </main>
 </template>
 
@@ -14,6 +15,7 @@ import CountdownTimer from "@/components/home/CountdownTimer.vue";
 import HomeInfoBox from "@/components/home/HomeInfoBox.vue";
 import Timeline from "@/components/home/Timeline.vue";
 import OurStory from "@/components/home/OurStory.vue";
+import Checkerboard from "@/components/Checkerboard.vue";
 
 export default {
   name: 'Home',
@@ -22,7 +24,8 @@ export default {
     CountdownTimer,
     HomeInfoBox,
     Timeline,
-    OurStory
+    OurStory,
+    Checkerboard
   }
 };
 </script>
