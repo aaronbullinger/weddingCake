@@ -53,7 +53,7 @@
 
 .save-text {
   flex: 1 1 40%;
-  font-family: Kefa, serif;
+  font-family: Abril Fatface, serif;
   color: $waldgruen-color;
   line-height: 0.7;
   text-align: left;

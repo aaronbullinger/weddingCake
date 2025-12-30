@@ -293,7 +293,7 @@ export default {
   font-size: 2rem;
   margin-bottom: 5rem;
   margin-top: 5rem;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: 400;
   color: $nebelblau-color;
 

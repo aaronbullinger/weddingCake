@@ -180,7 +180,7 @@
 
 .info-text h2 .highlight {
   color: $salbei-color;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .info-text p {

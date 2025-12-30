@@ -73,7 +73,7 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 6.5rem;
-  font-family: "Kefa", serif;
+  font-family: "Abril Fatface", serif;
   background-color: $waldgruen-color;
   width: 100vw;
   margin: 3.75rem calc(-50vw + 50%);

@@ -232,7 +232,7 @@ h2 {
   font-size: 2rem;
   font-weight: bold;
   margin: 2rem 0 1rem 0;
-  font-family: Kefa, serif;
+  font-family: Abril Fatface, serif;
   color: $sandstein-color;
 
   // Mobile
