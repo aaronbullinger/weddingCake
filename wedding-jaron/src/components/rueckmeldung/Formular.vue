@@ -562,7 +562,7 @@ button.disabled {
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3); /* halbtransparent */
+  background: rgba($sandstein-color, 0.5); // 20% Deckkraft
   backdrop-filter: blur(4px);      /* unscharfer Hintergrund */
   display: flex;
   justify-content: center;
