@@ -28,8 +28,8 @@
 
 <script lang="ts">
 export default {
-  name: 'Trauzeugen',
-};
+  name: 'Trauzeugen'
+}
 </script>
 
 <style scoped lang="scss">

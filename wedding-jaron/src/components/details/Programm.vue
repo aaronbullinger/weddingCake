@@ -51,10 +51,10 @@ export default {
         { date: '20.30 Uhr', description: 'Dessert' },
         { date: '21.00 Uhr', description: 'Party & Tanz' },
         { date: '23.00 Uhr', description: 'Mitternachtssnack' }, 
-      ],
-    };
-  },
-};
+      ]
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
