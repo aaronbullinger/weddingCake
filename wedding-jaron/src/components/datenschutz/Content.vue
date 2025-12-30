@@ -373,6 +373,9 @@ export default {
   font-weight: 700;
   text-align: left;
   color: $espresso-color;
+
+  -webkit-tap-highlight-color: transparent; // iOS Highlight entfernen
+  outline: none;
 }
 
 .accordion-header .arrow {
@@ -392,6 +395,15 @@ export default {
   line-height: 1.6;
   color: #3f2a1d;
   text-align: left; // fixiert linksbündig
+}
+
+/* Fokus / Klick / Active komplett neutralisieren */
+.accordion-header:focus,
+.accordion-header:focus-visible,
+.accordion-header:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
 }
 
 .arrow  {
