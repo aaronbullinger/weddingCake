@@ -6,7 +6,7 @@
         <p class="trauzeuge-name">Sophie aka Zopfel</p>
         <div class="trauzeuge-kontakt">
           <p><span class="emoji">📞</span>+49 176 61147105</p>
-          <p><span class="emoji">✉️</span>️sophie.victoria@gmx.de</p>
+          <p><span class="emoji">✉️</span><a href="mailto:sophie.victoria@gmx.de">sophie.victoria@gmx.de</a></p>
         </div>
       </div>
       <img src="@/assets/Zopfel.jpg" alt="Zopfel" class="trauzeugen-image">
@@ -18,7 +18,7 @@
         <p class="trauzeuge-name">Marcel aka Celmo</p>
         <div class="trauzeuge-kontakt">
           <p><span class="emoji">📞</span>+49 174 9160164</p>
-          <p><span class="emoji">✉️</span>️marcel.falke@gmx.net</p>
+          <p><span class="emoji">✉️</span><a href="mailto:marcel.falke@gmx.net">marcel.falke@gmx.net</a></p>
         </div>
       </div>
       <img src="@/assets/Celmo.png" alt="Celmo" class="trauzeugen-image">
@@ -35,7 +35,7 @@ export default {
 <style scoped lang="scss">
 .trauzeugen {
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: space-between;
   width: 75vw;
   max-width: 100%;
@@ -66,11 +66,13 @@ export default {
 
 .trauzeuge-name {
   font-weight: bold;
+  font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
 }
 
 .trauzeuge-kontakt p {
   margin: 0.2rem 0;
+  font-size: 0.8rem;
   color: $espresso-color;
   font-family: Helvetica, sans-serif;
 }
@@ -113,17 +115,23 @@ export default {
 @media (max-width: 768px) {
   .trauzeugen {
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
   }
 
   .trauzeuge {
     flex-direction: column; /* Bild unter Name, Kontakt unter Bild */
     align-items: center;
     text-align: center;
+    gap: 0.2rem;
   }
 
   .trauzeuge-name {
     order: 1; /* Name oben */
+  }
+
+  .trauzeugen-text {
+    text-align: left;
+    display: contents; /* sorgt dafür, dass Name und Kontakt Grid-Items werden */
   }
 
   .trauzeugen-image {
@@ -136,6 +144,16 @@ export default {
   }
 }
 
+a {
+  color: inherit;          // gleiche Farbe wie normaler Text
+  text-decoration: none;   // kein Unterstrich
+  cursor: default;         // Standard-Cursor
+}
+
+a:hover {
+  color: $waldgruen-color;
+  cursor: pointer;         // beim Hover erscheint Zeiger
+}
 
 .emoji {
   filter: grayscale(100%);

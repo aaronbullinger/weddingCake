@@ -58,6 +58,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+  .info-box {
+    position: relative; // wichtig, damit die Kreise relativ zueinander liegen
+    overflow: visible;  // sonst wird der obere Kreis ggf. abgeschnitten
+  }
 /* --------------------
    Kreise
 -------------------- */
@@ -65,11 +70,20 @@ export default {
 .background-card-top {
   display: flex;
   justify-content: center;
+  padding: 5rem 0 10rem 0;
+  margin: 0 auto -15rem auto;
+  position: relative;
+  z-index: 10;
+  background-color: $nebelblau-color; // Beispielfarbe
+  border-radius: 0 0 100% 100%; // Halbkreis unten
+  max-width: 75vw;
+
   // Mobile - Vollbreite mit perfekter Zentrierung
   @media (max-width: 768px) {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
+    margin: 0 auto;
     padding: 2rem 1rem;
     box-sizing: border-box;
   }
@@ -82,11 +96,14 @@ export default {
 .background-card {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 5;
+  max-width: 80vw;
+
   // Mobile - Vollbreite mit perfekter Zentrierung
   @media (max-width: 768px) {
     width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    margin: -8rem auto 0 auto;
     padding: 2rem 1rem;
     box-sizing: border-box;
   }
@@ -113,9 +130,23 @@ export default {
 -------------------- */
 
 .info-text {
-  max-width: 55rem;
   width: 100%;
   text-align: center;
+  
+  //padding: 2.5rem 0;
+  margin-top:  1rem;
+  max-width: none;
+  position: relative;
+
+  // Mobile
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+
+  // Small Mobile
+  @media (max-width: 480px) {
+    padding: 1.5rem 0.5rem;
+  }
 }
 
 .subtitle {
@@ -124,6 +155,8 @@ export default {
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
+  font-family: Abhaya Libre;
+  font-weight: 800;
 
   &.espresso {
     color: $espresso-color;

@@ -43,5 +43,7 @@ export default {
   margin-top: 2rem;
   text-align: left;
   max-width: 35vw;
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
 }
 </style>

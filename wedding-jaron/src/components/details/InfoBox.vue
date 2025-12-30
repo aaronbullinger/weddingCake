@@ -10,7 +10,7 @@
           Von Ansprechpartner bis Outfit – hier findet ihr alle wichtigen Infos.
         </p>
         <p>
-          🤝Eure Ansprechpartner vor Ort
+          🤝 Eure Ansprechpartner vor Ort
           <br>Unsere großartigen Trauzeug*innen sind für euch da – bei Fragen, Ideen oder spontanen Geistesblitzen:
         </p>
       </div>
