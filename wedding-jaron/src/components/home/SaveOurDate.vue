@@ -11,16 +11,15 @@
 
     <div class="date-images">
       <div class="date-item">
-        <img src="@/assets/safeOurDateImg1.png" alt="Bild 1">
         <span class="date-number">26</span>
+        <span class="date-number">20</span>
       </div>
       <div class="date-item">
-        <img src="@/assets/safeOurDateImg2.png" alt="Bild 1">
         <span class="date-number">05</span>
+        <span class="date-number">26</span>
       </div>
       <div class="date-item">
-        <img src="@/assets/safeOurDateImg3.png" alt="Bild 1">
-        <span class="date-number">26</span>
+        <img src="@/assets/safeOurDateImg3.png" alt="Wedding visual element">
       </div>
     </div>
   </div>
@@ -116,10 +115,18 @@
 
 .date-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   // ⭐ wichtig
+  align-items: center;
+  gap: 0;              // oder -0.3rem
+  line-height: 1;
   width: 9rem;
   height: 25rem;
   overflow: hidden;
   border-radius: 6rem;
+  background-color: $nebelblau-color;
+  color: $sandstein-color;
 
   // Tablet
   @media (max-width: 1024px) {
@@ -151,14 +158,14 @@
 }
 
 .date-number {
-  position: absolute;
   bottom: 1.25rem;
+  top: 50%;                      // ⭐ optisches Zentrum
   left: 50%;
   transform: translateX(-50%);
   font-size: 7rem;
   font-weight: bold;
-  color: $nebelblau-color;
   pointer-events: none;
+  line-height: 1;             // ⭐ enger Abstand
 
   // Tablet
   @media (max-width: 1024px) {
