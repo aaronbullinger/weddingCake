@@ -1,5 +1,5 @@
 :root {
-  font-family: Abril Fatface, serif;
+  font-family: "Abril Fatface", serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -15,6 +15,12 @@
   --nebelblau-color: #7A9EB1;
   --gravelgrau-color: #707070;
   --lightblue-color: #CAD9DB;
+}
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -152,6 +158,19 @@ button:focus-visible {
 
 .arrow-down {
   margin-top: 5rem;
+}
+
+.nav-links {
+  font-family: Helvetica, sans-serif;
+  font-weight: 200;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    font-weight: 500;
+    color: var(--waldgruen-color);
+  }
 }
 
 .background-card {
