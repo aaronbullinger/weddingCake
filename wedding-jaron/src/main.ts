@@ -1,16 +1,21 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
-import router from './router/index.ts'
+import router from './router'
 
-createApp(App).use(router).mount('#app')
+// Font Awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-// import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+// Styles
+import './style.css'
 
-// library.add(faChevronDown)
+// 🔥 ALLE solid Icons registrieren
+library.add(fas)
 
-// const app = createApp(App)
-// app.component('font-awesome-icon', FontAwesomeIcon)
-// app.mount('#app')
+// App (nur einmal!)
+const app = createApp(App)
+
+app.use(router)
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.mount('#app')

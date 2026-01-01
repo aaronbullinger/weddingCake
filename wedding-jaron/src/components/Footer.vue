@@ -3,9 +3,9 @@
   <footer class="footer">
     <div class="footer-sections">
       <div class="footer-section">
-        <p><span class="footer-emoji">📍</span> Steinbachhof, Vaihingen an der Enz</p>
-        <p><span class="footer-emoji">📞</span> Sophie +49 176 61147105</p>
-        <p><span class="footer-emoji">📞</span> Marcel +49 173 6371692</p>
+        <p class="location"><span class="footer-emoji"><i><font-awesome-icon icon="location-dot" /></i></span> <span>Steinbachhof, <br>Vaihingen an der Enz</span></p>
+        <p><span class="footer-emoji"><i><font-awesome-icon icon="phone" /></i></span> Sophie +49 176 61147105</p>
+        <p><span class="footer-emoji"><i><font-awesome-icon icon="phone" /></i></span> Marcel +49 173 6371692</p>
       </div>
 
       <div class="footer-section">
@@ -33,6 +33,17 @@
 </script>
 
 <style lang="scss" scoped>
+  .location {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+  .i {
+    color: white;
+    border: none;
+    //height: auto;
+    width: 2rem;
+  }
 .footer {
   background-color: $waldgruen-color;
   display: flex;
