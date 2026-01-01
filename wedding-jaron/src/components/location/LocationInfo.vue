@@ -25,7 +25,7 @@
             </iframe>
           </div>
           <div class="contact-info">
-          <div class="pin-column"><i><font-awesome-icon icon="location-dot" /></i></div>
+          <i><font-awesome-icon icon="location-dot" /></i>
           <div class="address">
             <p>Steinbachhof Event - GmbH</p>
             <p>Hofgut Steinbachhof 1</p>
@@ -44,6 +44,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.i {
+  color: $espresso-color;
+}
+
 .background-card {
   background-color: $nebelblau-color;
   display: flex;

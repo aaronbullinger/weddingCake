@@ -6,7 +6,7 @@
     <div class="unterkuenfte">
       <div class="hotel">
         <div class="hotel-header">
-          <h3>Team Hotel</h3>
+          <h3><i class="icon"><font-awesome-icon :icon="['fas', 'hotel']" /></i>Team Hotel</h3>
         </div>
         <div class="hotel-list">
           <a href="https://alter-adler.de">Alter Adler</a>
@@ -20,7 +20,7 @@
       </div>
       <div class="camping">
         <div class="camping-header">
-          <h3>Team Camping</h3>
+          <h3><i class="icon"><font-awesome-icon :icon="['fas', 'caravan']" /></i>Team Camping</h3>
         </div>
         <p>Für alle, die lieber unter freiem Himmel übernachten möchten, stehen vor Ort Stellplätze zur Verfügung, auf denen mit Camper oder Wohnwagen übernachtet werden kann. Die Anzahl der Plätze ist begrenzt.</p>
       </div>
@@ -36,6 +36,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .icon {
+    margin-right: 0.5rem;
+  }
 .background-card {
   background-color: $salbei-color;
   display: flex;

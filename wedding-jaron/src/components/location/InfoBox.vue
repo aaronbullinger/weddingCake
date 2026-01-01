@@ -14,8 +14,8 @@
       </p>
       <p>
         Egal ob ihr eher Team Tanzfläche oder Team Weinprobe seid – hier kommt jede*r auf seine Kosten.<br></br>
-        📌 Die genaue Adresse und alle Infos zur Anfahrt findet ihr weiter unten.<br></br>
-        🛏️ Wer in der Nähe übernachten will, bekommt von uns natürlich ein paar Tipps.
+        <i><font-awesome-icon icon="location-dot" /></i> Die genaue Adresse und alle Infos zur Anfahrt findet ihr weiter unten.<br></br>
+       <i><font-awesome-icon :icon="['fas', 'bed']" /></i> Wer in der Nähe übernachten will, bekommt von uns natürlich ein paar Tipps.
       </p>
       <p>
         Wir freuen uns riesig, diesen besonderen Tag mit euch an so einem coolen Ort zu feiern!
@@ -33,6 +33,10 @@
 </script>
 
 <style scoped lang="scss">
+.i {
+  color: $espresso-color;
+}
+
 .info-box {
   display: flex;
   align-items: center;

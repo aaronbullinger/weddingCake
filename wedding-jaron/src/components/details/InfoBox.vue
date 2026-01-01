@@ -10,7 +10,7 @@
           Von Ansprechpartner bis Outfit – hier findet ihr alle wichtigen Infos.
         </p>
         <p>
-          🤝 Eure Ansprechpartner vor Ort
+          <i class="icon"><font-awesome-icon :icon="['fas', 'user-group']" /></i>Eure Ansprechpartner vor Ort
           <br>Unsere großartigen Trauzeug*innen sind für euch da – bei Fragen, Ideen oder spontanen Geistesblitzen:
         </p>
       </div>
@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.icon {
+  margin-right: 0.5rem;
+}
 .info-box {
   display: flex;
   align-items: center;
