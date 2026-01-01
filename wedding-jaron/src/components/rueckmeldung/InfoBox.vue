@@ -29,10 +29,11 @@
 <style scoped lang="scss">
 .info-box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   max-width: 75vw;
   width: 100%;
+  height: 30vh;
   margin: 0 auto;
   gap: 3.7rem;
   box-sizing: border-box;
@@ -71,7 +72,7 @@
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  height: 25rem;
+  height: 30vh;
   margin-right: 0;
 
   // Tablet
@@ -96,8 +97,8 @@
 }
 
 .info-image img {
-  width: 9rem;
-  height: 25rem;
+  width: 12rem;
+  height: 30vh;
   object-fit: cover;
   border-radius: 6rem;
   filter: grayscale(100%);

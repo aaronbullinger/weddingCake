@@ -53,8 +53,8 @@ export default {
 }
 
 .trauzeugen-image {
-  width: 11rem;
-  height: 25rem;
+  width: 12rem;
+  height: 30vh;
   object-fit: cover;
   border-radius: 6rem;
   filter: grayscale(100%);
