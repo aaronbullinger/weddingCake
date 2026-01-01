@@ -38,12 +38,14 @@
     flex-direction: row;
     text-align: left;
   }
+
   .i {
     color: white;
     border: none;
     //height: auto;
     width: 2rem;
   }
+
 .footer {
   background-color: $waldgruen-color;
   display: flex;
@@ -53,7 +55,6 @@
   font-family: Helvetica, sans-serif;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  margin-top: 5rem;
   padding: 3rem 1.5rem;
 
   // Desktop

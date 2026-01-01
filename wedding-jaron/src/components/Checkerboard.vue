@@ -15,7 +15,7 @@ export default {
 
 .checkerboard {
   width: 100vw;
-  margin-bottom: -80px;
+  //margin-bottom: -80px;
 }
 
 /* gemeinsame Basis */
