@@ -12,10 +12,10 @@
     <div class="date-images">
       <div class="date-item">
         <span class="date-number">26</span>
-        <span class="date-number">20</span>
+        <span class="date-number">05</span>
       </div>
       <div class="date-item">
-        <span class="date-number">05</span>
+        <span class="date-number">20</span>
         <span class="date-number">26</span>
       </div>
       <div class="date-item">
@@ -41,7 +41,6 @@
   gap: 1rem;
   overflow: hidden;
 
-  // Mobile First - Tablet and below
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 2rem;
@@ -62,25 +61,21 @@
     margin: 0;
     word-break: break-word;
 
-    // Tablet
     @media (max-width: 1024px) {
       font-size: 6rem;
     }
 
-    // Mobile
     @media (max-width: 768px) {
       font-size: 4rem;
       text-align: center;
       line-height: 0.8;
     }
 
-    // Small Mobile
     @media (max-width: 480px) {
       font-size: 3rem;
     }
   }
 
-  // Mobile layout adjustment
   @media (max-width: 768px) {
     flex: none;
     text-align: center;
@@ -91,15 +86,13 @@
   flex: 1 1 55%;
   max-width: 55%;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: flex-end;
 
-  // Tablet
   @media (max-width: 1024px) {
     gap: 2rem;
   }
 
-  // Mobile
   @media (max-width: 768px) {
     flex: none;
     max-width: 100%;
@@ -107,82 +100,54 @@
     justify-content: space-around;
   }
 
-  // Small Mobile - Stack vertically if needed
   @media (max-width: 480px) {
     gap: 0.5rem;
   }
 }
 
 .date-item {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;   // ⭐ wichtig
-  align-items: center;
-  //gap: -3rem;              // oder -0.3rem
-  line-height: 1;
-  width: 9rem;
-  height: 25rem;
-  overflow: hidden;
-  border-radius: 6rem;
+  flex-direction: column;  // Zahlen untereinander
+  justify-content: center; // vertikal zentrieren
+  align-items: center;     // horizontal zentrieren
+  gap: 1rem;               // Abstand zwischen den Zahlen
+  width: 10rem;
+  height: 30vh;
+; border-radius: 10rem;
   background-color: $nebelblau-color;
   color: $sandstein-color;
+  text-align: center;
 
-  // Tablet
-  @media (max-width: 1024px) {
-    width: 9rem;
-    height: 20rem;
-    border-radius: 5rem;
-  }
-
-  // Mobile
-  @media (max-width: 768px) {
-    width: 8rem;
-    height: 15rem;
-    border-radius: 4rem;
-  }
-
-  // Small Mobile
-  @media (max-width: 480px) {
-    width: 6rem;
-    height: 12rem;
-    border-radius: 3rem;
+  .date-number {
+    font-size: 6rem;
+    font-weight: bold;
+   line-height: 1;
   }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: inherit;
     filter: grayscale(100%);
   }
-}
 
-.date-number {
-  position: absolute;
-  bottom: 1.25rem;
-  transform: translate(-50%, -50%); // ⭐ echte Zentrierung
-  //transform: translateX(-50%);
-  font-size: 7rem;
-  font-weight: bold;
-  pointer-events: none;
-  line-height: 1rem;             // ⭐ enger Abstand
-
-  // Tablet
-  @media (max-width: 1024px) {
-    font-size: 6rem;
-    bottom: 1rem;
-  }
-
-  // Mobile
   @media (max-width: 768px) {
-    font-size: 5rem;
-    bottom: 0.8rem;
+    width: 8rem;
+    height: 16rem;
+
+    .date-number {
+      font-size: 5rem;
+    }
   }
 
-  // Small Mobile
   @media (max-width: 480px) {
-    font-size: 4.5rem;
-    bottom: 0.6rem;
+    width: 6rem;
+    height: 12rem;
+
+    .date-number {
+      font-size: 4rem;
+    }
   }
 }
 </style>
