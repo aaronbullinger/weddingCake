@@ -119,7 +119,7 @@
   flex-direction: column;
   justify-content: center;   // ⭐ wichtig
   align-items: center;
-  gap: 0;              // oder -0.3rem
+  //gap: -3rem;              // oder -0.3rem
   line-height: 1;
   width: 9rem;
   height: 25rem;
@@ -158,14 +158,14 @@
 }
 
 .date-number {
+  position: absolute;
   bottom: 1.25rem;
-  top: 50%;                      // ⭐ optisches Zentrum
-  left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%); // ⭐ echte Zentrierung
+  //transform: translateX(-50%);
   font-size: 7rem;
   font-weight: bold;
   pointer-events: none;
-  line-height: 1;             // ⭐ enger Abstand
+  line-height: 1rem;             // ⭐ enger Abstand
 
   // Tablet
   @media (max-width: 1024px) {

@@ -77,19 +77,20 @@ export default {
   background-color: $waldgruen-color;
   width: 100vw;
   margin: 3.75rem calc(-50vw + 50%);
-  padding: 1.25rem 0;
+  padding: 3rem 0;
 
   // Tablet
   @media (max-width: 1024px) {
     gap: 4rem;
     margin: 3rem calc(-50vw + 50%);
+    
   }
 
   // Mobile
   @media (max-width: 768px) {
-    gap: 1.5rem;
+    gap: 0.25rem;
     margin: 2rem calc(-50vw + 50%);
-    padding: 1rem 0.5rem;
+    padding: 2rem 1rem;
     flex-wrap: wrap;
     // Grid Layout für Mobile mit 3 Elementen
     display: grid;
@@ -149,27 +150,28 @@ export default {
   }
 
   small {
-    font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
     color: #FFFFFF;
 
     // Tablet
     @media (max-width: 1024px) {
-      font-size: 1.8rem;
+      font-size: 1.25rem;
     }
 
     // Mobile
     @media (max-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 
     // Small Mobile
     @media (max-width: 480px) {
-      font-size: 1.2rem;
+      font-size: 0.85rem;
     }
 
     // Very Small Mobile
     @media (max-width: 380px) {
-      font-size: 1rem;
+      font-size: 0.85rem;
     }
   }
 }
