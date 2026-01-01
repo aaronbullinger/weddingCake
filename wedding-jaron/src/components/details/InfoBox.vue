@@ -11,7 +11,7 @@
       </p>
       <p>
         <i class="icon"><font-awesome-icon :icon="['fas', 'user-group']" /></i>
-        Eure Ansprechpartner vor Ort
+        <span class="contact-people">Eure Ansprechpartner</span>
         <br>Unsere großartigen Trauzeug*innen sind für euch da – bei Fragen, Ideen oder spontanen Geistesblitzen:
       </p>
     </div>
@@ -27,7 +27,7 @@ export default {
 <style scoped lang="scss">
 .info-box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 75vw;
   margin: 0 auto;
@@ -76,5 +76,10 @@ export default {
   filter: grayscale(100%);
   margin-top: 3rem;
   margin-right: 5rem;
+}
+
+.contact-people {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 </style>

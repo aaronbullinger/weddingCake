@@ -21,11 +21,11 @@ export default {
 .info-box {
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: center;
   max-width: 75vw;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 7.5rem;
+  margin: 5rem 0rem;
   box-sizing: border-box;
   flex-direction: column;
 }
@@ -41,7 +41,7 @@ export default {
 .p-block {
   margin-bottom: 1.5rem;
   margin-top: 2rem;
-  text-align: left;
+  text-align: center;
   max-width: 35vw;
   font-family: Helvetica, sans-serif;
   font-size: 1rem;

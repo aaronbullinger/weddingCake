@@ -48,9 +48,7 @@ export default {
         { date: '17.00 Uhr', description: 'Aperitifooo' },
         { date: '18.00 Uhr', description: 'Seating' },
         { date: '18.30 Uhr', description: 'Abendessen' },
-        { date: '20.30 Uhr', description: 'Dessert' },
-        { date: '21.00 Uhr', description: 'Party & Tanz' },
-        { date: '23.00 Uhr', description: 'Mitternachtssnack' }, 
+        { date: '21.00 Uhr', description: 'Partyyy' },
       ]
     }
   }
@@ -192,7 +190,7 @@ export default {
 // }
 
 .timeline-container {
-  padding: 2.5rem 0;
+  padding-bottom: 4rem;
   margin-top:  15rem;
   width: 100%;
   max-width: none;
@@ -325,6 +323,7 @@ export default {
   font-weight: bold;
   font-size: 1.3rem;
   color: $lightblue-color;
+  font-family: "Abril Fatface", serif;
   width: 8rem;
   text-align: right;
   flex-shrink: 0;
