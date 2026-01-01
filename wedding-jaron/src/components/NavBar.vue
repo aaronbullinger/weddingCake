@@ -61,7 +61,7 @@ const closeMobileMenu = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
+  height: 8rem;
   box-sizing: border-box;
   position: relative;
 }
@@ -249,7 +249,7 @@ const closeMobileMenu = () => {
 // Sehr kleine Bildschirme
 @media (max-width: 480px) {
   .navbar-content {
-    height: 4rem;
+    height: 5rem;
   }
 
   .homebutton {
