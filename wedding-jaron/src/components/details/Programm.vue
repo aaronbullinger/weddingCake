@@ -155,7 +155,7 @@ export default {
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
-  font-family: Abhaya Libre;
+  font-family: "Abril Fatface", serif;
   font-weight: 800;
 
   &.espresso {

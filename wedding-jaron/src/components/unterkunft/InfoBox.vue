@@ -36,6 +36,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 75vw;
+  height: 30vh;
   width: 100%;
   margin: 0 auto;
   gap: 3.7rem;
@@ -75,7 +76,7 @@
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  height: 25rem;
+  height: 30vh;
   margin-right: 0;
 
   // Tablet
@@ -100,8 +101,8 @@
 }
 
 .info-image img {
-  width: 9rem;
-  height: 25rem;
+  width: 12rem;
+  height: 30vh;
   object-fit: cover;
   border-radius: 6rem;
   filter: grayscale(100%);
