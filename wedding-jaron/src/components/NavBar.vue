@@ -1,30 +1,40 @@
 <template>
   <header class="navbar">
     <div class="navbar-content">
-      <!-- Logo -->
-      <div class="homebutton">
+      <!-- Logo --> 
+       <div class="homebutton"> 
         <RouterLink to="/home">JaAron</RouterLink>
       </div>
 
-      <!-- Hamburger Menu Button (nur auf mobilen Geräten sichtbar) -->
+      <!-- Hamburger Menu Button (nur auf mobilen und Tablet-Geräten sichtbar) -->
       <button class="hamburger-menu" @click="toggleMobileMenu" :class="{ active: isMobileMenuOpen }">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Navigation -->
-      <nav class="nav-links" :class="{ 'mobile-open': isMobileMenuOpen }">
-        <RouterLink to="/rueckmeldung" @click="closeMobileMenu">Rückmeldung</RouterLink>
-        <RouterLink to="/location" @click="closeMobileMenu">Location</RouterLink>
-        <RouterLink to="/unterkunft" @click="closeMobileMenu">Unterkunft</RouterLink>
-        <RouterLink to="/details" @click="closeMobileMenu">Details</RouterLink>
-        <RouterLink v-if="isVisible" to="/faq" @click="closeMobileMenu">FAQ</RouterLink>
-        <RouterLink v-if="isVisible" to="/photoGallery" @click="closeMobileMenu">Photo</RouterLink>
+      <!-- Desktop Navigation -->
+      <nav class="nav-links">
+        <RouterLink to="/rueckmeldung">Rückmeldung</RouterLink>
+        <RouterLink to="/location">Location</RouterLink>
+        <RouterLink to="/unterkunft">Unterkunft</RouterLink>
+        <RouterLink to="/details">Details</RouterLink>
+        <RouterLink v-if="isVisible" to="/faq">FAQ</RouterLink>
+        <RouterLink v-if="isVisible" to="/photoGallery">Photo</RouterLink>
       </nav>
 
-      <!-- Overlay für mobile Navigation -->
-      <div class="mobile-overlay" :class="{ active: isMobileMenuOpen }" @click="closeMobileMenu"></div>
+      <!-- Mobile/Tablet Fullscreen Menu -->
+      <div class="mobile-menu" :class="{ active: isMobileMenuOpen }">
+        <button class="close-button" @click="closeMobileMenu">✕</button>
+        <nav class="mobile-nav-links">
+          <RouterLink to="/rueckmeldung" @click="closeMobileMenu">Rückmeldung</RouterLink>
+          <RouterLink to="/location" @click="closeMobileMenu">Location</RouterLink>
+          <RouterLink to="/unterkunft" @click="closeMobileMenu">Unterkunft</RouterLink>
+          <RouterLink to="/details" @click="closeMobileMenu">Details</RouterLink>
+          <RouterLink v-if="isVisible" to="/faq" @click="closeMobileMenu">FAQ</RouterLink>
+          <RouterLink v-if="isVisible" to="/photoGallery" @click="closeMobileMenu">Photo</RouterLink>
+        </nav>
+      </div>
     </div>
   </header>
 </template>
@@ -32,248 +42,174 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const isVisible = false;
-const isMobileMenuOpen = ref(false);
+const isVisible = false
+const isMobileMenuOpen = ref(false)
 
 const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+  isMobileMenuOpen.value = !isMobileMenuOpen.value
 }
 
 const closeMobileMenu = () => {
-  isMobileMenuOpen.value = false;
+  isMobileMenuOpen.value = false
 }
 </script>
 
 <style lang="scss" scoped>
+  .nav-links, .mobile-menu, .mobile-nav-links {
+    font-family: 'Helvetica', sans-serif;
+  }
+
+/* Grundlegende Navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   background: #fff;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
 }
 
 .navbar-content {
-  max-width: 75vw;
+  max-width: 90vw;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 8rem;
-  box-sizing: border-box;
+  align-items: center;
+  height: 5rem;
   position: relative;
 }
 
-.homebutton {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: $waldgruen-color;
-  display: flex;
-  align-items: center;
-  z-index: 1002;
-}
-
-.homebutton a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-.hamburger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1002;
-  outline: none; // Entfernt den Fokus-Rahmen
-
-  // Alternative: Fokus-Rahmen nur ausblenden, aber Barrierefreiheit beibehalten
-  &:focus {
-    outline: none;
-    // Optional: Eigenen Fokus-Stil definieren
-    // box-shadow: 0 0 0 2px rgba($waldgruen-color, 0.3);
+.homebutton { 
+  font-size: 2.5rem; 
+  font-weight: bold; 
+  color: $waldgruen-color; 
+  display: flex; 
+  align-items: center; 
+  z-index: 1002; } 
+  
+  .homebutton a { 
+    text-decoration: none; 
+    color: inherit; 
   }
-
-  span {
-    width: 2rem;
-    height: 0.25rem;
-    background: $waldgruen-color;
-    border-radius: 0.125rem;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-  }
-
-  &.active {
-    span:first-child {
-      transform: rotate(45deg);
-    }
-
-    span:nth-child(2) {
-      opacity: 0;
-      transform: translateX(20px);
-    }
-
-    span:nth-child(3) {
-      transform: rotate(-45deg);
-    }
-  }
-}
 
 .nav-links {
   display: flex;
   gap: 2rem;
   font-size: 1.1rem;
   color: $salbei-color;
-}
 
-.nav-links a {
-  display: flex;
-  align-items: center;
-  color: $salbei-color;
-  text-decoration: none;
-  padding: 0 0.5rem;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
 
-.nav-links .router-link-active {
-  color: $waldgruen-color;
-}
-
-.mobile-overlay {
-  display: none;
-}
-
-// Mobile Styles
-@media (max-width: 768px) {
-  .navbar-content {
-    max-width: 95vw;
-    padding: 0 1rem;
-    justify-content: space-between;
-    position: relative;
-  }
-
-  .homebutton {
-    font-size: 2rem;
-  }
-
-  .hamburger-menu {
-    display: flex;
-    margin-bottom: 1rem;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 5rem;
-    right: -100vw;
-    width: 100vw; // Volle Breite statt 50vw
-    height: auto;
-    max-height: calc(100vh - 5rem);
-    background: #fff;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0;
-    padding: 1rem 0;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
-    border-radius: 0; // Keine abgerundeten Ecken für volle Breite
-    z-index: 1001;
-
-    &.mobile-open {
-      right: 0;
+    &.router-link-active {
+      color: $waldgruen-color;
     }
+  }
+}
+
+/* Hamburger Button */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+
+  span {
+    width: 1.5rem;
+    height: 0.2rem;
+    background: $waldgruen-color;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  &.active span:first-child {
+    transform: rotate(45deg) translate(5px,5px);
+  }
+  &.active span:nth-child(2) {
+    opacity: 0;
+  }
+  &.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px,-5px);
+  }
+}
+
+/* Mobile/Tablet Fullscreen Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $waldgruen-color;
+  display: none; /* Standard: nur mobil/tablet sichtbar */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
 
     a {
-      font-size: 1rem;
-      padding: 0.75rem 1rem;
-      width: 90%;
-      text-align: center;
-      border-radius: 0.25rem;
-      margin: 0.25rem 0;
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 1002;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.2s;
 
       &:hover {
-        background: rgba($waldgruen-color, 0.1);
-        color: $waldgruen-color;
+        color: #cce0c0;
       }
     }
   }
+}
 
-  .mobile-overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.3); // Weniger stark abgedunkelt
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000; // Niedriger z-index als die Navigation
-
-    &.active {
-      opacity: 1;
-      visibility: visible;
-    }
+/* Desktop: Hamburger & Mobile Menü ausblenden */
+@media (min-width: 1025px) {
+  .hamburger-menu, .mobile-menu {
+    display: none;
   }
 }
 
-// Tablet Styles
-@media (max-width: 1024px) and (min-width: 769px) {
-  .navbar-content {
-    max-width: 90vw;
-  }
-
-  .nav-links {
-    gap: 1.5rem;
-
-    a {
-      font-size: 1rem;
-      padding: 0 0.25rem;
-    }
-  }
-}
-
-// Sehr kleine Bildschirme
-@media (max-width: 480px) {
-  .navbar-content {
-    height: 5rem;
-  }
-
-  .homebutton {
-    font-size: 1.75rem;
-  }
-
+/* Tablet & Mobile: Hamburger & Fullscreen-Menü aktiv */
+@media (max-width: 1024px) {
   .hamburger-menu {
-    width: 1.5rem;
-    height: 1.5rem;
-
-    span {
-      width: 1.5rem;
-      height: 0.2rem;
-    }
+    display: flex;
   }
-
+  .mobile-menu {
+    display: flex;
+  }
   .nav-links {
-    top: 4rem;
-    width: 100vw; // Auch hier volle Breite statt 60vw
-
-    a {
-      font-size: 0.9rem;
-      padding: 0.5rem 0.75rem;
-    }
+    display: none; /* Desktop-Menü ausblenden */
   }
 }
 </style>
