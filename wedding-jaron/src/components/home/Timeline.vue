@@ -181,7 +181,7 @@ export default {
 .timeline-date {
   font-weight: bold;
   font-size: 1.3rem;
-  color: $lightblue-color;
+  color: $sandstein-color;
   width: 8rem;
   text-align: right;
   flex-shrink: 0;
@@ -194,7 +194,7 @@ export default {
 
   // Mobile
   @media (max-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     width: auto;
     text-align: left;
     font-weight: bold;
@@ -208,8 +208,9 @@ export default {
 }
 
 .timeline-description {
-  font-size: 0.9rem;
-  color: $lightblue-color;
+  font-size: 1rem;
+  color: $sandstein-color;
+  font-family: Helvetica, sans-serife;
   white-space: nowrap;
   overflow: visible;
   text-overflow: unset;
