@@ -12,11 +12,11 @@
         Übernachten ganz in der Nähe – wir haben mitgedacht.
       </p>
       <p>
-        Nach der Feier noch weit fahren? Muss nicht sein! Direkt auf dem Steinbachhof könnt ihr im Auto oder Camper übernachten – ganz entspannt und unkompliziert.
+       Nach der Feier noch weit fahren? Muss nicht sein! Direkt auf dem Steinbachhof könnt ihr im Auto oder Camper übernachten – ganz entspannt und unkompliziert.
       </p>
       <p>
         Wer lieber in einem richtigen Bett schläft, findet in der Nähe ein paar schöne Unterkünfte.
-        Jeder darf sich gern seine Übernachtungsmöglichkeit selbst aussuchen und direkt reservieren – ganz nach den eigenen Wünschen.
+        Jede*r darf sich die Übernachtungsmöglichkeit selbst aussuchen und direkt reservieren – ganz nach den eigenen Wünschen.
       </p>
 
     </div>

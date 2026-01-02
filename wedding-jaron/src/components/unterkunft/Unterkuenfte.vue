@@ -15,14 +15,15 @@
           <a href="https://www.pension-christina.de">Pension Christina</a>
         </div>
         <div class="taxi-text">
-          <p>Am Abend steht ein Taxiunternehmen bereit, das euch sicher ins gewünschte Hotel bringt.</p>
+          <p>Am Abend steht ein Taxiunternehmen bereit, das euch sicher in das gewünschte Hotel bringt.</p>
         </div>
       </div>
       <div class="camping">
         <div class="camping-header">
           <h3><i class="icon"><font-awesome-icon :icon="['fas', 'caravan']" /></i>Team Camping</h3>
         </div>
-        <p>Für alle, die lieber unter freiem Himmel übernachten möchten, stehen vor Ort Stellplätze zur Verfügung, auf denen mit Camper oder Wohnwagen übernachtet werden kann. Die Anzahl der Plätze ist begrenzt.</p>
+        <p>Für alle, die lieber unter freiem Himmel übernachten möchten, stehen vor Ort Stellplätze zur Verfügung, auf denen mit Camper oder Wohnwagen übernachtet werden kann.
+            Die Anzahl der Plätze ist begrenzt.</p>
       </div>
     </div>
   </div>
