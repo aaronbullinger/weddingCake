@@ -45,5 +45,9 @@ export default {
   max-width: 35vw;
   font-family: Helvetica, sans-serif;
   font-size: 1rem;
+
+  @Media (max-width: 768px) {
+    max-width: 75vw;
+  }
 }
 </style>
