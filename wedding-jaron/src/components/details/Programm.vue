@@ -26,11 +26,9 @@
               v-for="(event, index) in events"
               :key="index"
           >
-          <div class="timeline-list-content">
             <div class="timeline-date">{{ event.date }}</div>
             <div class="timeline-line"></div>
             <div class="timeline-description">{{ event.description }}</div>
-          </div>      
           </div>
         </div>
       </div>
