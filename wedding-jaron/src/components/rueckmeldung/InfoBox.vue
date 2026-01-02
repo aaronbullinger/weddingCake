@@ -4,13 +4,13 @@
     <div class="info-text">
 
       <h2>
-        <span class="highlight">Damit wir besser Planen können</span><br>
+        <span class="highlight">Damit wir besser planen können</span><br>
         gebt uns doch gerne Feedback
       </h2>
 
       <p>
-        Bitte gib uns kurz Bescheid, ob du an unserem großen Tag dabei bist. Teile uns mit,
-        ob du mit Begleitung oder Kindern kommst, ob es Unverträglichkeiten oder Allergien gibt und ob du eine Übernachtung brauchst.
+        Bitte gib uns kurz Bescheid, ob du an unserem großen Tag dabei bist.
+Teile uns mit, ob du mit Begleitung oder Kindern kommst, ob es Unverträglichkeiten oder Allergien gibt und ob du eine Übernachtung benötigst.
       </p>
       <p>
         Informationen zur Unterkunft und zur Location findest du im Menü unter den jeweiligen Punkten.

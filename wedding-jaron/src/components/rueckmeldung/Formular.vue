@@ -142,7 +142,7 @@
       <!-- Nachricht -->
       <section>
         <div class="nachricht">
-          <p class="label-textarea">Möchtest Du uns noch was anderes Wissen lassen?</p>
+          <p class="label-textarea">Möchtest du uns noch etwas anderes wissen lassen?</p>
           <textarea v-model="form.nachricht" rows="4"></textarea>
         </div>
       </section>
