@@ -109,9 +109,12 @@
         </div>
 
         <div class="allergien">
-          <input v-model="form.allergien" id="allergien" />
-          <label for="allergien">Allergien</label>
+          <div class="input-group">
+            <input v-model="form.allergien" id="allergien" placeholder="" />
+            <label for="allergien">Allergien</label>
+          </div>
         </div>
+
       </section>
 
       <!-- Übernachtung -->
@@ -312,8 +315,7 @@ export default {
 .background-card {
   @media (max-width: 768px) {
     width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    margin: 5rem auto;
     padding: 2rem 1rem;
     box-sizing: border-box;
   }
@@ -324,8 +326,17 @@ export default {
 }
 
 .description {
-  @media (max-width: 768px) { margin-bottom: 3rem; }
-  @media (max-width: 480px) { margin-bottom: 2rem; }
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+    max-width: 70%;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 2rem;
+    max-width: 70%;
+    text-align: center;
+  }
 }
 
 .formular {
@@ -333,8 +344,14 @@ export default {
   margin: 2rem auto;
   font-family: Helvetica, sans-serif;
 
-  @media (max-width: 768px) { max-width: 100%; margin: 1rem auto; }
-  @media (max-width: 480px) { margin: 0.5rem auto; }
+  @media (max-width: 768px) {
+    max-width: 70%;
+    margin: 1rem auto;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0.5rem auto;
+  }
 }
 
 p {
