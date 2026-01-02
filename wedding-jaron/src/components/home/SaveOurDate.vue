@@ -30,6 +30,7 @@
 </script>
 
 <style scoped lang="scss">
+
 .save-date-section {
   width: 90%;
   max-width: 75%;
@@ -42,9 +43,15 @@
   overflow: hidden;
   flex-wrap: wrap;            // Ermöglicht Umbruch
 
+  @media (max-width: 1240px) {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
   @media (max-width: 1024px) and (min-width: 769px) {
     // iPad und ähnliche Tablet-Größen
-    gap: 0.5rem;
+    gap: 3rem;
     width: 95%;
   }
 
@@ -56,34 +63,6 @@
   }
 }
 
-.date-images {
-  flex: 1 1 55%;
-  max-width: 55%;
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-end;
-
-  @media (max-width: 1024px) and (min-width: 769px) {
-    gap: 1rem;
-    max-width: 60%;
-  }
-
-  @media (max-width: 1024px) {
-    gap: 2rem;
-  }
-
-  @media (max-width: 768px) {
-    flex: none;
-    max-width: 100%;
-    gap: 1rem;
-    justify-content: space-around;
-  }
-
-  @media (max-width: 480px) {
-    gap: 0.5rem;
-  }
-}
-
 .save-text {
   flex: 1 1 40%;
   font-family: Abril Fatface, serif;
@@ -91,11 +70,15 @@
   line-height: 0.7;
   text-align: left;
 
-
   h1 {
     font-size: 8rem;
     margin: 0;
     word-break: break-word;
+
+    @media (max-width: 1240px) {
+      font-size: 7rem;
+      text-align: center;
+    }
 
     @media (max-width: 1024px) {
       font-size: 6rem;
@@ -113,6 +96,11 @@
     }
   }
 
+  @media (max-width: 1240px) {
+    flex: none;
+    text-align: center;
+  }
+
   @media (max-width: 768px) {
     flex: none;
     text-align: center;
@@ -125,6 +113,13 @@
   display: flex;
   gap: 2rem;
   justify-content: flex-end;
+
+  @media (max-width: 1240px) {
+    flex: none;
+    max-width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
 
   @media (max-width: 1024px) {
     gap: 2rem;
@@ -144,7 +139,6 @@
     gap: 0.5rem;
   }
 }
-
 
 .date-item {
   display: flex;
