@@ -55,6 +55,7 @@ export default {
   width: 12rem;
   height: 30vh;
   object-fit: cover;
+  object-position: center top; /* Zeigt den oberen Bildbereich (Köpfe) */
   border-radius: 6rem;
   filter: grayscale(100%);
 }
