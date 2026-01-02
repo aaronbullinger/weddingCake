@@ -104,6 +104,10 @@ const closeMobileMenu = () => {
     color: inherit;
     font-weight: 600;
 
+     &:hover {
+      color: $waldgruen-color; /* nur der Link, über dem die Maus ist */
+    }
+
     &.router-link-active {
       color: $waldgruen-color;
     }
@@ -167,7 +171,7 @@ const closeMobileMenu = () => {
     top: 1rem;
     right: 1rem;
     font-size: 2rem;
-    color: #fff;
+    color: $salbei-color;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -180,14 +184,14 @@ const closeMobileMenu = () => {
     text-align: center;
 
     a {
-      color: #fff;
+      color: $sandstein-color;
       font-size: 1.5rem;
       font-weight: bold;
       text-decoration: none;
       transition: color 0.2s;
 
       &:hover {
-        color: #cce0c0;
+        color: $salbei-color;
       }
     }
   }
