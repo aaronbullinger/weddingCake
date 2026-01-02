@@ -462,6 +462,23 @@ textarea {
   @media (max-width: 480px) { font-size: 0.7rem; padding: 0.4rem 0.6rem; }
 }
 
+input, textarea {
+  background-color: transparent !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+
+  &:focus {
+    background-color: transparent !important;
+  }
+
+  &:active {
+    background-color: transparent !important;
+  }
+}
+
+
 /* Textarea Extras */
 textarea {
   resize: vertical;
