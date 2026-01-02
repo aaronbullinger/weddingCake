@@ -33,10 +33,9 @@
 <style scoped lang="scss">
 .info-box {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   max-width: 75vw;
-  height: 30vh;
   width: 100%;
   margin: 0 auto;
   gap: 3.7rem;
@@ -76,6 +75,7 @@
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  width: 12rem;
   height: 30vh;
   margin-right: 0;
 
