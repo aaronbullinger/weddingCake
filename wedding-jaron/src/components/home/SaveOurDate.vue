@@ -111,7 +111,7 @@
   justify-content: center; // vertikal zentrieren
   align-items: center;     // horizontal zentrieren
   gap: 1rem;               // Abstand zwischen den Zahlen
-  width: 10rem;
+  width: 12rem;
   height: 30vh;
 ; border-radius: 10rem;
   background-color: $nebelblau-color;
@@ -121,12 +121,12 @@
   .date-number {
     font-size: 6rem;
     font-weight: bold;
-   line-height: 1;
+    line-height: 1;
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 12rem;
+    height: 30vh;
     object-fit: cover;
     border-radius: inherit;
     filter: grayscale(100%);

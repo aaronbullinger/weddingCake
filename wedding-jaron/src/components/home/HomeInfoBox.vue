@@ -13,7 +13,7 @@
       <p>
         Mit großer Vorfreude laden wir dich zu unserem ganz besonderen Tag ein.
         <br>
-        Am <strong>26.05.26</strong>, ja, das ist ein Dienstag, feiern wir uns –
+        Am <strong>26.05.2026</strong>, ja, das ist ein Dienstag, feiern wir uns –
         mit einer freien Trauung, gutem Essen, Musik und allem, was das Herz berührt.
         Wir freuen uns riesig, diesen unvergesslichen Moment mit dir zu teilen!
       </p>
@@ -24,7 +24,7 @@
       </p>
       <p>
         Solltest du trotzdem noch Fragen haben, stehen wir – und natürlich auch unsere lieben
-        Trauzeuginnen – dir jederzeit gerne zur Verfügung!
+        Trauzeug:innen – dir jederzeit gerne zur Verfügung!
       </p>
 
       <button v-if="isVisible" class="callToAction-button">Mehr erfahren</button>

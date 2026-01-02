@@ -27,7 +27,7 @@ export default {
         { date: '24.09.2021', description: 'Erstes Kennenlernen' },
         { date: '23.10.2021', description: 'Unser erstes Treffen' },
         { date: '08.12.2021', description: 'Erster Kuss' },
-        { date: '26.02.2022', description: 'Zusammen gekommen' },
+        { date: '26.02.2022', description: 'Zusammengekommen' },
         { date: '28.05.2022', description: 'Erstes “Ich Liebe Dich”' },
         { date: '26.04.2024', description: 'Erste gemeinsame Wohnung' },
         { date: '08.08.2024', description: 'Verlobt' },

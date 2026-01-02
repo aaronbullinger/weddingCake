@@ -20,11 +20,11 @@
       Snowboard, Skateboard, Longboard – Hauptsache Bewegung und gute Laune.
     </p>
     <p>
-      Musik begleitet uns seit Tag eins. Unsere gemeinsame Playlist wächst mit uns – zwischen Deutschrap, Hipp-Hop, Indie und allem, was hängen bleibt. Ohne unseren Plattenspieler wären viele Date-Nights nur halb so schön.
+      Musik begleitet uns seit Tag eins. Unsere gemeinsame Playlist wächst mit uns – zwischen Deutschrap, Hip-Hop, Indie und allem, was hängen bleibt. Ohne unseren Plattenspieler wären viele Date-Nights nur halb so schön.
     </p>
     <p>
-      Am 08.08.24 haben wir uns ganz für uns, still und standesamtlich, das Ja-Wort gegeben.
-      <br>Am 26.05.26 feiern wir mit euch ganz offiziell und ganz groß unseren JaAron Day.
+      Am 08.08.2024 haben wir uns ganz für uns, still und standesamtlich, das Ja-Wort gegeben.
+      <br>Am 26.05.2026 feiern wir mit euch ganz offiziell und ganz groß unseren JaAron Day.
       <br>Mit Lieblingsmenschen, gutem Essen, viel Musik und noch mehr Liebe.
     </p>
   </div>
@@ -93,7 +93,7 @@ export default {
 
   h2 {
     font-size: 2rem;
-    color: $waldgruen-color;
+    color: $nebelblau-color;
     margin-bottom: 1.5rem;
 
     // Tablet
