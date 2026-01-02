@@ -8,7 +8,7 @@
           Ihr habt Lust, uns mit einem Spiel zu überraschen, eine Rede zu halten
           oder den Abend mit einer schönen Idee zu bereichern?
           <br /><br />
-          Meldet euch gerne vorher bei unseren Trauzeuginnen.
+          Meldet euch gerne vorher bei unseren Trauzeug*innen.
           Sie koordinieren alles, damit der Ablauf entspannt bleibt.
         </p>
       </div>

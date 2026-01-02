@@ -11,7 +11,7 @@
       </p>
       <p>
         <i class="icon"><font-awesome-icon :icon="['fas', 'user-group']" /></i>
-        <span class="contact-people">Eure Ansprechpartner</span>
+        <span class="contact-people">Eure Ansprechpartner:innen</span>
         <br>Unsere großartigen Trauzeug*innen sind für euch da – bei Fragen, Ideen oder spontanen Geistesblitzen:
       </p>
     </div>

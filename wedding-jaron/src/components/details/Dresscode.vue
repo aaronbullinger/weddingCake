@@ -3,7 +3,7 @@
       <div class="info-text">
         <h2 class="subtitle">Dresscode</h2>
         <p class="p-block">
-          Ob Leinenhemd, Sommerkleid oder das kleine Schwarze – Hauptsache, du fühlst dich wohl!<br />
+          Ob Leinenhemd, Sommerkleid oder das kleine Schwarze – Hauptsache, ihr fühlt euch wohl!<br />
           Unser Farbschema ist <strong>grünlich</strong> oder <strong>bläulich</strong>, aber kein Muss. <br />
           Wir freuen uns auf euren individuellen Stil – festlich, bequem, gerne tanzbar.
         </p>
