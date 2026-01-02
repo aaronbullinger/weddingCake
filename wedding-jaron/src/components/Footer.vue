@@ -12,7 +12,7 @@
         <p><RouterLink to="/rueckmeldung">Rückmeldung</RouterLink></p>
         <p><RouterLink to="/location">Location</RouterLink></p>
         <p><RouterLink to="/unterkunft">Unterkunft</RouterLink></p>
-        <p v-if="isVisible"><RouterLink to="/details">Details</RouterLink></p>
+        <p><RouterLink to="/details">Details</RouterLink></p>
         <p v-if="isVisible"><RouterLink to="/faq">FAQ</RouterLink></p>
       </div>
 
