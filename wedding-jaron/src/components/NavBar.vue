@@ -1,8 +1,8 @@
 <template>
   <header class="navbar">
     <div class="navbar-content">
-      <!-- Logo --> 
-       <div class="homebutton"> 
+      <!-- Logo -->
+      <div class="homebutton">
         <RouterLink to="/home">JaAron</RouterLink>
       </div>
 
@@ -55,9 +55,9 @@ const closeMobileMenu = () => {
 </script>
 
 <style lang="scss" scoped>
-  .nav-links, .mobile-menu, .mobile-nav-links {
-    font-family: 'Helvetica', sans-serif;
-  }
+.nav-links, .mobile-menu, .mobile-nav-links {
+  font-family: 'Helvetica', sans-serif;
+}
 
 /* Grundlegende Navbar */
 .navbar {
@@ -80,18 +80,19 @@ const closeMobileMenu = () => {
   position: relative;
 }
 
-.homebutton { 
-  font-size: 2.5rem; 
-  font-weight: bold; 
-  color: $waldgruen-color; 
-  display: flex; 
-  align-items: center; 
-  z-index: 1002; } 
-  
-  .homebutton a { 
-    text-decoration: none; 
-    color: inherit; 
-  }
+.homebutton {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $waldgruen-color;
+  display: flex;
+  align-items: center;
+  z-index: 1002;
+}
+
+.homebutton a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .nav-links {
   display: flex;
@@ -101,15 +102,18 @@ const closeMobileMenu = () => {
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: $salbei-color; /* Explizit die Grundfarbe setzen */
     font-weight: 600;
+    transition: color 0.2s ease, font-weight 0.2s ease; /* Smooth transition */
 
-     &:hover {
-      color: $waldgruen-color; /* nur der Link, über dem die Maus ist */
+    &:hover {
+      color: $waldgruen-color;
+      font-weight: bold; /* Nur beim Hover bold */
     }
 
     &.router-link-active {
       color: $waldgruen-color;
+      font-weight: bold; /* Aktiver Link ist bold */
     }
   }
 }
@@ -186,12 +190,13 @@ const closeMobileMenu = () => {
     a {
       color: $sandstein-color;
       font-size: 1.5rem;
-      font-weight: bold;
+      font-weight: 600; /* Grundgewicht für mobile Links */
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.2s ease, font-weight 0.2s ease;
 
       &:hover {
         color: $salbei-color;
+        font-weight: bold; /* Nur beim Hover bold */
       }
     }
   }
