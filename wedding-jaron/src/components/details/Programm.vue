@@ -26,9 +26,11 @@
               v-for="(event, index) in events"
               :key="index"
           >
+          <div class="timeline-list-content">
             <div class="timeline-date">{{ event.date }}</div>
             <div class="timeline-line"></div>
             <div class="timeline-description">{{ event.description }}</div>
+          </div>      
           </div>
         </div>
       </div>
@@ -138,12 +140,12 @@ export default {
 
   // Mobile
   @media (max-width: 768px) {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 5rem 1rem ;
   }
 
   // Small Mobile
   @media (max-width: 480px) {
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 0.5rem 5rem 1rem;
   }
 }
 
@@ -272,6 +274,7 @@ export default {
   @media (max-width: 768px) {
     align-items: flex-start;
     padding-left: 3.5rem;
+    //line-height: 1rem;
     gap: 2rem 0;
   }
 
@@ -322,7 +325,7 @@ export default {
 .timeline-date {
   font-weight: bold;
   font-size: 1.3rem;
-  color: $lightblue-color;
+  color: $sandstein-color;
   font-family: "Abril Fatface", serif;
   width: 8rem;
   text-align: right;
@@ -336,7 +339,7 @@ export default {
 
   // Mobile
   @media (max-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     width: auto;
     text-align: left;
     font-weight: bold;
@@ -351,7 +354,7 @@ export default {
 
 .timeline-description {
   font-size: 0.9rem;
-  color: $lightblue-color;
+  color: $sandstein-color;
   white-space: nowrap;
   overflow: visible;
   text-overflow: unset;
