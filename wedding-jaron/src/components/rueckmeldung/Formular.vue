@@ -370,8 +370,8 @@ h2 {
   font-family: Abril Fatface, serif;
   color: $sandstein-color;
 
-  @media (max-width: 768px) { font-size: 1.6rem; margin: 1.5rem 0 0.8rem 0; }
-  @media (max-width: 480px) { font-size: 1.4rem; margin: 1rem 0 0.6rem 0; }
+  @media (max-width: 768px) { font-size: 1.6rem; margin: 3rem 0 0.8rem 0; }
+  @media (max-width: 480px) { font-size: 1.4rem; margin: 3rem 0 0.6rem 0; }
 }
 
 /* ----------------------------
