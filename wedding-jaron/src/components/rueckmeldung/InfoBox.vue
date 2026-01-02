@@ -29,7 +29,7 @@ Teile uns mit, ob du mit Begleitung oder Kindern kommst, ob es Unverträglichkei
 <style scoped lang="scss">
 .info-box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   max-width: 75vw;
   width: 100%;
