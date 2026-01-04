@@ -5,7 +5,7 @@
       <div class="footer-section">
         <p class="location"><span class="footer-emoji"><i><font-awesome-icon icon="location-dot" /></i></span> <span>Steinbachhof, <br>Vaihingen an der Enz</span></p>
         <p><span class="footer-emoji"><i><font-awesome-icon icon="phone" /></i></span> Sophie +49 176 61147105</p>
-        <p><span class="footer-emoji"><i><font-awesome-icon icon="phone" /></i></span> Marcel +49 173 6371692</p>
+        <p><span class="footer-emoji"><i><font-awesome-icon icon="phone" /></i></span> Marcel +49 174 9160164</p>
       </div>
 
       <div class="footer-section">
