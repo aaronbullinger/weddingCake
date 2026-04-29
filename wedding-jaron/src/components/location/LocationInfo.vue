@@ -1,3 +1,4 @@
+
 <template>
   <div class="background-card">
     <div class="arrow-down">
@@ -6,25 +7,25 @@
 
     <div class="description">
       <div class="description-block">
-          <div class="text-container">
-            <h3 class="second-headline">Feiern auf dem Weingut Steinbachhof</h3>
-            <h4 class="second-header">Eine Location mit besonderem Ambiente</h4>
-            <p>
-              Wein. Wald. Wohlfühlen.
-              Dieses Motto des Naturparks Strombergs spüren Sie bereits bei der Anfahrt zum Steinbachhof.
-              <br>
-              Unweit von Stuttgart lassen Sie die Hektik des Alltags hinter sich und finden bei uns eine Insel
-              der Ruhe und Erholung, eingebettet in sanfte Hügel mit weiten Ausblicken.
-            </p>
-          </div>
-          <div class="camping-map">
-            <iframe class="google-maps"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1556.40386439827!2d8.960192766641338!3d49.00014218683695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47977f4711ec8e97%3A0xf75ad920a6e87d84!2sWeingut%20Steinbachhof%20und%20Steinbachhof%20Event-GmbH!5e0!3m2!1sde!2sde!4v1754946967723!5m2!1sde!2sde"
-                      loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-          <div class="contact-info">
+        <div class="text-container">
+          <h3 class="second-headline">Feiern auf dem Weingut Steinbachhof</h3>
+          <h4 class="second-header">Eine Location mit besonderem Ambiente</h4>
+          <p>
+            Wein. Wald. Wohlfühlen.
+            Dieses Motto des Naturparks Strombergs spüren Sie bereits bei der Anfahrt zum Steinbachhof.
+            <br>
+            Unweit von Stuttgart lassen Sie die Hektik des Alltags hinter sich und finden bei uns eine Insel
+            der Ruhe und Erholung, eingebettet in sanfte Hügel mit weiten Ausblicken.
+          </p>
+        </div>
+        <div class="camping-map">
+          <iframe class="google-maps"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1556.40386439827!2d8.960192766641338!3d49.00014218683695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47977f4711ec8e97%3A0xf75ad920a6e87d84!2sWeingut%20Steinbachhof%20und%20Steinbachhof%20Event-GmbH!5e0!3m2!1sde!2sde!4v1754946967723!5m2!1sde!2sde"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="contact-info">
           <i><font-awesome-icon icon="location-dot" /></i>
           <div class="address">
             <p>Steinbachhof Event - GmbH</p>
@@ -44,6 +45,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .i {
   color: $espresso-color;
 }
@@ -72,47 +74,57 @@ export default {
   width: 100%;
   max-width: 60vw;
   margin: 7rem 0 5rem 0;
-  text-align: left;
+  text-align: center; // Grundlegende Zentrierung für alle Breiten
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .second-headline {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
+  text-align: center; // Immer zentriert
 }
 
 .second-header {
   font-size: 1.25rem;
   font-weight: 500;
   margin: -1.5rem 0 2rem 0;
+  text-align: center; // Immer zentriert
 }
 
 .description-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center; // Immer zentriert
+  align-items: center;
   width: 100%;
   max-width: 75vw;
   margin: 3rem auto 0;
   gap: 2rem;
+  text-align: center; // Basis-Zentrierung
 }
 
 .text-container {
   flex: 0 0 45%;
   max-width: 100%;
+  text-align: center; // Immer zentriert
 }
 
 .text-container p {
   color: $espresso-color;
-  text-align: left;
-  margin-top: 0;
+  text-align: center; // Immer zentriert statt left
+  margin: 0 auto;
 }
 
 .camping-map {
   flex: 0 0 50%;
-  aspect-ratio: 1 / 1; // Map skaliert quadratisch / 16:9
+  aspect-ratio: 1 / 1;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .google-maps {
@@ -124,11 +136,12 @@ export default {
 .contact-info {
   flex: 0 0 45%;
   display: flex;
-  align-self: flex-end;
+  align-self: center; // Immer zentriert
+  justify-content: center; // Immer zentriert
   gap: 0.5rem;
   border-top: 1.5px solid $sandstein-color;
   padding-top: 1rem;
-  //margin-top: -15rem;
+  text-align: center; // Immer zentriert
 }
 
 .pin-column {
@@ -145,17 +158,56 @@ export default {
   color: $sandstein-color;
   font-size: 0.9rem;
   line-height: 1.4;
+  text-align: center; // Immer zentriert
 
   p {
     margin: 0;
+    text-align: center; // Immer zentriert
   }
 }
-// Tablet
- @media (max-width: 1024px) and (min-width: 769px) {
-      .description-block {
-        max-width: 90vw;
-      }
+
+// ================================
+// BREAKPOINT FÜR 1080px - Vertikale Anordnung
+// ================================
+@media (max-width: 1080px) {
+  .description-block {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    gap: 2rem;
   }
+
+  .text-container {
+    order: 1;
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .camping-map {
+    order: 2;
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .contact-info {
+    order: 3;
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+// Tablet
+@media (max-width: 1024px) and (min-width: 769px) {
+  .description-block {
+    max-width: 90vw;
+  }
+}
+
 // ================================
 // Mobile Responsive Design
 // ================================
@@ -163,17 +215,14 @@ export default {
   .description {
     max-width: 90vw;
     margin: 4rem 0 3rem 0;
-    padding: 0 1rem;
   }
 
   .description h3 {
     font-size: 1.5rem;
-    text-align: center;
   }
 
   .description h4 {
     font-size: 1.1rem;
-    text-align: center;
   }
 
   .description-block {
@@ -185,15 +234,12 @@ export default {
 
   .text-container {
     order: 1;
-    width: 100%;       // volle Breite
-    max-width: 100%;   // keine Einschränkung
-    text-align: left;  // optional, wenn du linksbündig willst, sonst center
-    padding: 0 1rem;   // optional, etwas Innenabstand
+    width: 100%;
+    max-width: 100%;
   }
 
   .text-container p {
     font-size: 0.9rem;
-    text-align: left; 
   }
 
   .camping-map {
@@ -206,12 +252,6 @@ export default {
   .contact-info {
     order: 3;
     width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .address {
-    text-align: center;
   }
 }
 

@@ -3,6 +3,7 @@
     <InfoBox />
     <Trauzeugen />
     <Checkerboard />
+    <Presents />
     <Dresscode />
     <Programm />
     <Checkerboard />
@@ -13,6 +14,7 @@
 import InfoBox from '@/components/details/InfoBox.vue';
 import Trauzeugen from '@/components/details/Trauzeugen.vue';
 import Checkerboard from '../components/Checkerboard.vue';
+import Presents from '../components/details/Presents.vue';  
 import Dresscode from '../components/details/Dresscode.vue';
 import Programm from '../components/details/Programm.vue';
 
@@ -22,6 +24,7 @@ export default {
     InfoBox,
     Trauzeugen,
     Checkerboard,
+    Presents,
     Dresscode,
     Programm
   }

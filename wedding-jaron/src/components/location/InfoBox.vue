@@ -39,7 +39,7 @@
 
 .info-box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   max-width: 75vw;
   width: 100%;
@@ -80,7 +80,7 @@
 .info-image {
   flex: 1;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   width: 12rem;
   height: 30vh;
   margin-right: 0;

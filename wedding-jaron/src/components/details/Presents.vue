@@ -1,11 +1,10 @@
 <template>
-    <div class="info-box">
+    <div class="info-box" id="presents">
       <div class="info-text">
-        <h2 class="subtitle">Dresscode</h2>
+        <h2 class="subtitle">Presents</h2>
         <p class="p-block">
-          Ob Leinenhemd, Sommerkleid oder das kleine Schwarze – Hauptsache, ihr fühlt euch wohl!<br />
-          Unser Farbschema ist <strong>grünlich</strong> oder <strong>bläulich</strong>, aber kein Muss. <br />
-          Wir freuen uns auf euren individuellen Stil – festlich, bequem, gerne tanzbar.
+          Das größte Geschenk ist für uns, dass ihr diesen besonderen Tag mit uns feiert. </br>
+          Wenn ihr uns zusätzlich eine Freude machen möchtet, freuen wir uns sehr über einen Beitrag zu unserer gemeinsamen Zukunft.
         </p>
       </div>
     </div>
@@ -13,7 +12,7 @@
 
 <script lang="ts">
 export default {
-  name: 'Dresscode'
+  name: 'Presents'
 }
 </script>
 
@@ -23,11 +22,12 @@ export default {
   align-items: center;
   align-self: center;
   justify-content: center;
-  max-width: 75vw;
+  //max-width: 75vw;
   width: 100%;
-  margin: 2.5rem 0rem;
+  margin-top: 5rem;
   box-sizing: border-box;
   flex-direction: column;
+  background-color: $salbei-color;;
 }
 
 .subtitle {
@@ -35,7 +35,7 @@ export default {
   margin-bottom: 1.25rem;
   line-height: 1.2;
   font-weight: 400;
-  color: $nebelblau-color;
+  color: $waldgruen-color;
 }
 
 .p-block {
@@ -49,5 +49,9 @@ export default {
   @Media (max-width: 768px) {
     max-width: 75vw;
   }
+}
+
+#present {
+   scroll-margin-top: 100px;
 }
 </style>

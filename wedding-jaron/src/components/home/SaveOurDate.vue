@@ -30,6 +30,7 @@
 </script>
 
 <style scoped lang="scss">
+
 .save-date-section {
   width: 90%;
   max-width: 75%;
@@ -40,6 +41,19 @@
   align-items: center;
   gap: 1rem;
   overflow: hidden;
+  flex-wrap: wrap;            // Ermöglicht Umbruch
+
+  @media (max-width: 1240px) {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (max-width: 1024px) and (min-width: 769px) {
+    // iPad und ähnliche Tablet-Größen
+    gap: 3rem;
+    width: 95%;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -61,8 +75,14 @@
     margin: 0;
     word-break: break-word;
 
+    @media (max-width: 1240px) {
+      font-size: 7rem;
+      text-align: center;
+    }
+
     @media (max-width: 1024px) {
       font-size: 6rem;
+      text-align: center;
     }
 
     @media (max-width: 768px) {
@@ -74,6 +94,11 @@
     @media (max-width: 480px) {
       font-size: 3rem;
     }
+  }
+
+  @media (max-width: 1240px) {
+    flex: none;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
@@ -89,8 +114,18 @@
   gap: 2rem;
   justify-content: flex-end;
 
+  @media (max-width: 1240px) {
+    flex: none;
+    max-width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+
   @media (max-width: 1024px) {
     gap: 2rem;
+    max-width: 100%;
+    justify-content: space-around;
+    flex: none;
   }
 
   @media (max-width: 768px) {
@@ -107,16 +142,17 @@
 
 .date-item {
   display: flex;
-  flex-direction: column;  // Zahlen untereinander
-  justify-content: center; // vertikal zentrieren
-  align-items: center;     // horizontal zentrieren
-  gap: 1rem;               // Abstand zwischen den Zahlen
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   width: 12rem;
   height: 30vh;
-; border-radius: 10rem;
+  border-radius: 10rem;
   background-color: $nebelblau-color;
   color: $sandstein-color;
   text-align: center;
+  flex-shrink: 0;          // Verhindert Schrumpfen der date-items
 
   .date-number {
     font-size: 6rem;
@@ -125,11 +161,25 @@
   }
 
   img {
-    width: 12rem;
-    height: 30vh;
+    width: 12rem;            // Feste Breite für das Bild
+    height: 30vh;            // Feste Höhe für das Bild
     object-fit: cover;
     border-radius: inherit;
     filter: grayscale(100%);
+  }
+
+  @media (max-width: 1024px) {
+    width: 10rem;
+    height: 18rem;
+
+    .date-number {
+      font-size: 7rem;
+    }
+
+    img {
+      width: 10rem;           // Angepasste Breite für Mobile
+      height: 18rem;         // Angepasste Höhe für Mobile
+    }
   }
 
   @media (max-width: 768px) {
@@ -139,6 +189,11 @@
     .date-number {
       font-size: 5rem;
     }
+
+    img {
+      width: 8rem;           // Angepasste Breite für Mobile
+      height: 16rem;         // Angepasste Höhe für Mobile
+    }
   }
 
   @media (max-width: 480px) {
@@ -147,6 +202,11 @@
 
     .date-number {
       font-size: 4rem;
+    }
+
+    img {
+      width: 6rem;           // Angepasste Breite für sehr kleine Screens
+      height: 12rem;         // Angepasste Höhe für sehr kleine Screens
     }
   }
 }

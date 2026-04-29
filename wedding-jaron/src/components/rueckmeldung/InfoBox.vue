@@ -33,7 +33,6 @@ Teile uns mit, ob du mit Begleitung oder Kindern kommst, ob es Unverträglichkei
   justify-content: space-between;
   max-width: 75vw;
   width: 100%;
-  height: 30vh;
   margin: 0 auto;
   gap: 3.7rem;
   box-sizing: border-box;
