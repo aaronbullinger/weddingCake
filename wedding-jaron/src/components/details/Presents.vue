@@ -4,7 +4,7 @@
         <h2 class="subtitle">Presents</h2>
         <p class="p-block">
           Das größte Geschenk ist für uns, dass ihr diesen besonderen Tag mit uns feiert. </br>
-          Wenn ihr uns zusätzlich eine Freude machen möchtet, freuen wir uns sehr über einen Beitrag zu unserer gemeinsamen Zukunft.
+          Wenn ihr uns zusätzlich eine Freude machen möchtet, freuen wir uns sehr über einen finanziellen Beitrag zu unserer gemeinsamen Zukunft.
         </p>
       </div>
     </div>
