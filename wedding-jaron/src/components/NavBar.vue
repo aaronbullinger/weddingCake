@@ -15,7 +15,7 @@
 
       <!-- Desktop Navigation -->
       <nav class="nav-links">
-        <RouterLink to="/rueckmeldung">Rückmeldung</RouterLink>
+        <RouterLink v-if="isVisible" to="/rueckmeldung">Rückmeldung</RouterLink>
         <RouterLink to="/location">Location</RouterLink>
         <RouterLink to="/unterkunft">Unterkunft</RouterLink>
         <RouterLink to="/details">Details</RouterLink>
