@@ -27,7 +27,7 @@
       <div class="mobile-menu" :class="{ active: isMobileMenuOpen }">
         <button class="close-button" @click="closeMobileMenu">✕</button>
         <nav class="mobile-nav-links">
-          <RouterLink to="/rueckmeldung" @click="closeMobileMenu">Rückmeldung</RouterLink>
+          <RouterLink  v-if="isVisible" to="/rueckmeldung" @click="closeMobileMenu">Rückmeldung</RouterLink>
           <RouterLink to="/location" @click="closeMobileMenu">Location</RouterLink>
           <RouterLink to="/unterkunft" @click="closeMobileMenu">Unterkunft</RouterLink>
           <RouterLink to="/details" @click="closeMobileMenu">Details</RouterLink>
