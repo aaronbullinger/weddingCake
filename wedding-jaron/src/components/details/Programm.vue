@@ -48,7 +48,7 @@ export default {
         { date: '17.00 Uhr', description: 'Aperitifooo' },
         { date: '18.00 Uhr', description: 'Seating' },
         { date: '18.30 Uhr', description: 'Abendessen' },
-        { date: '21.00 Uhr', description: 'Partyyy' },
+        { date: '21.30 Uhr', description: 'Partyyy' },
       ]
     }
   }

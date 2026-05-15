@@ -5,6 +5,8 @@
         <p class="p-block">
           Ob Leinenhemd, Sommerkleid oder das kleine Schwarze – Hauptsache, ihr fühlt euch wohl!<br />
           Unser Farbschema ist <strong>grünlich</strong> oder <strong>bläulich</strong>, aber kein Muss. <br />
+          Aaron wird einen beigen Anzug tragen. Wer ebenfalls im Anzug kommt, kann dies bei der Farbwahl gerne berücksichtigen. <br />
+           <br />
           Wir freuen uns auf euren individuellen Stil – festlich, bequem, gerne tanzbar.
         </p>
       </div>

@@ -17,6 +17,13 @@
             Unweit von Stuttgart lassen Sie die Hektik des Alltags hinter sich und finden bei uns eine Insel
             der Ruhe und Erholung, eingebettet in sanfte Hügel mit weiten Ausblicken.
           </p>
+           <p>
+            Hier findest Du Informationen zur Anfahrt und Parkmöglichkeiten
+          </p>
+          <div class="download-buttons">
+            <a :href="anfahrtPdf" download class="callToAction-button" target="_blank" rel="noopener">Anfahrt-Info herunterladen</a>
+            <a :href="parkImg" download class="callToAction-button" target="_blank" rel="noopener">Parkmöglichkeiten herunterladen</a>
+          </div>
         </div>
         <div class="camping-map">
           <iframe class="google-maps"
@@ -39,9 +46,18 @@
 </template>
 
 <script lang="ts">
+import AnfahrtPdf from '@/assets/JaAron_26_Anfahrtsbeschreibung.pdf'
+import ParkImg from '@/assets/JaAron_26_Parkmoeglichkeiten.jpg'
+
 export default {
-  name: 'LocationInfo'
-};
+  name: 'LocationInfo',
+  data() {
+    return {
+      anfahrtPdf: AnfahrtPdf,
+      parkImg: ParkImg
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
@@ -149,6 +165,34 @@ export default {
   text-align: center;
 }
 
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; // Immer zentriert
+  margin-top: 2rem;
+}
+
+.callToAction-button {
+  background-color: $espresso-color;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 5rem;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.callToAction-button:hover,
+.callToAction-button:focus {
+  background-color: #fff;
+  color: $espresso-color;
+  border-color: $espresso-color;
+}
+
 .emoji {
   font-size: 1rem;
   line-height: 1.4;
@@ -238,6 +282,17 @@ export default {
     max-width: 100%;
   }
 
+  .download-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .callToAction-button {
+    width: 80%;
+    max-width: 20rem;
+  }
+
   .text-container p {
     font-size: 0.9rem;
   }
@@ -281,6 +336,11 @@ export default {
   .camping-map {
     max-width: 20rem;
     height: 20rem;
+  }
+
+  .callToAction-button {
+    width: 90%;
+    max-width: 16rem;
   }
 
   .contact-info {
