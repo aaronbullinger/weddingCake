@@ -170,6 +170,8 @@ export default {
   gap: 1rem;
   justify-content: center; // Immer zentriert
   margin-top: 2rem;
+  position: relative;
+  z-index: 5;
 }
 
 .callToAction-button {
@@ -184,6 +186,7 @@ export default {
   align-items: center;
   justify-content: center;
   transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+  visibility: visible;
 }
 
 .callToAction-button:hover,
